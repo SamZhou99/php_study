@@ -4,10 +4,17 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Test extends CI_Controller
 {
 
+	public function __construct()
+	{
+		parent::__construct();
+	}
 
 	public function index()
 	{
-		echo 'index';
+		$publicList = ['index', 'json', 'reserved_word', 'add', 'select', 'update', 'delete'];
+		for ($i = 0; $i < count($publicList); $i++) {
+			echo "<p><a href='./$publicList[$i]'>$publicList[$i]</a></p>";
+		}
 	}
 
 	public function json()
@@ -15,11 +22,24 @@ class Test extends CI_Controller
 		$data = [
 			'flag' => '1',
 			'data' => 'Hello JSON',
+			'randomStr' => $this->randomStr(32),
 			'中文' => $this->randomCN(50),
-			'RandomStr' => $this->load->helper('string').random_string('alnum', 16)
 		];
-		// echo json_encode($data);
-		echo $this->load->helper('string').random_string('alnum', 16);
+		echo json_encode($data);
+
+		// echo $this->load->helper('string') . random_string('alnum', 16);
+	}
+
+	/**
+	 * 保留关键字
+	 */
+	public function reserved_word()
+	{
+		$data = [
+			'is_php' => is_php('5.1'),
+			'html_escape' => html_escape('<div>test div</div>')
+		];
+		echo json_encode($data);
 	}
 
 	public function add()
