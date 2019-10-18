@@ -13,7 +13,7 @@ class Test extends CI_Controller
 	{
 		$publicList = ['index', 'json', 'reserved_word', 'add', 'select', 'update', 'delete'];
 		for ($i = 0; $i < count($publicList); $i++) {
-			echo "<p><a href='./$publicList[$i]'>$publicList[$i]</a></p>";
+			echo "<p><a href='/test/$publicList[$i]'>$publicList[$i]</a></p>";
 		}
 	}
 
