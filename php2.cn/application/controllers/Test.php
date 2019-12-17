@@ -26,8 +26,6 @@ class Test extends CI_Controller
 			'中文' => $this->randomCN(50),
 		];
 		echo json_encode($data);
-
-		// echo $this->load->helper('string') . random_string('alnum', 16);
 	}
 
 	/**
@@ -60,16 +58,13 @@ class Test extends CI_Controller
 	public function select()
 	{
 		$data = [];
-		$total = $this->db->query("SELECT COUNT(0) AS total FROM `message`");
-		$query = $this->db->query("SELECT `message`.`*`, `member`.`accout` FROM `message` LEFT JOIN `member` ON `member`.`id`=`message`.`member_id` ORDER BY `message`.`id` DESC LIMIT 3");
+		$query = $this->db->query("SELECT l.*,c.name AS categoryName FROM `links` AS `l` LEFT JOIN `category` AS `c` ON `c`.`id`=`l`.`category` WHERE `status`=1 LIMIT 10");
 		foreach ($query->result() as $row) {
-			// echo $row->title;
 			$data[] = $row;
 		}
 		echo json_encode([
 			'data' => $data,
 			'num_rows' => $query->num_rows(),
-			'total' => $total->row()->total
 		]);
 	}
 
