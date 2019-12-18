@@ -14,7 +14,7 @@ define('TIME', microtime(true));
 error_reporting(E_ALL ^ E_NOTICE);
 
 //引入类库文件;
-include('./PHPnew.class.php');
+include('./class/PHPnew.class.php');
 $PHPnew = new PHPnew();
 $PHPnew->templates_new = false; // 是否实时更新
 
