@@ -10,21 +10,31 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<style>
 		body{
 			text-align: center;
+			background-color: #333333;
+			margin: 0px;
+			padding: 0px;
 		}
 		.container{
-			width: 80%;
+			width: 98%;
 		}
 		.container li {
 			list-style-type: none;
+			background-color: #FFFFFF;
+			padding: 10px;
+			margin: 10px;
+			border-radius: 10px;
 		}
 
 		.container .item-title {
 			text-align: left;
 			font-size: 2rem;
+			border-bottom-style:solid;
+			/* border-bottom-color: #EE33EE; */
+			border-bottom-color: #333333;
+			margin-bottom: 10px;
 		}
 
 		.container .item-link {
-			margin: 10px;
 			overflow: hidden;
 		}
 
