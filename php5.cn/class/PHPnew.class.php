@@ -6,9 +6,9 @@
 */
 
 class PHPnew {
-	public $templates_dir         = './Data/default/';     //模板路径;
-	public $templates_default     = './Data/default/';  //默认模板路径;
-    public $templates_cache       = './Data/cache_tpl/'; //缓存模板路径;
+	public $templates_dir         = './template/default/';     //模板路径;
+	public $templates_default     = './template/default/';  //默认模板路径;
+    public $templates_cache       = './template/cache_tpl/'; //缓存模板路径;
     public $templates_source      = null;              // css, js目录
 	public $templates_postfix     = '.html';           //模板后缀;
     public $templates_caching     = '.php';            //缓存后缀;
