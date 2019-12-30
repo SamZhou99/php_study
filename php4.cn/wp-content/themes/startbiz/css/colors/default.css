@@ -1,0 +1,501 @@
+/*=========================================
+    Primary Color
+=========================================*/
+/* info */
+#features-list [class*="col-"]:nth-child(1) .features-list-item .icon i,
+#features-list [class*="col-"]:nth-child(3) .features-list-item .icon i {
+    color: #db2723;
+}
+#features-list .second i,
+#features-list .second h4,
+#features-list .second p {
+    color: #fff !important;
+}
+#features-list .second {
+    background: #db2723;
+}
+.preloader {
+    background: #db2723;
+}
+.slide-bg-line.slide-left {
+    border-left-color: #db2723;
+}
+
+.slide-bg-line.slide-center {
+    border-top-color: #db2723;
+}
+
+.slide-bg-line.slide-right {
+    border-right-color: #db2723;
+}
+.startbiz-btn .posts-navigation .nav-links a:hover,
+.startbiz-btn .boxed-btn:hover,
+.startbiz-btn .view-more:hover,
+.startbiz-btn .read-more-link:hover {
+    color: #db2723 !important;
+}
+.startbiz-btn .boxed-btn {
+    background-color: #db2723 !important;
+}
+/* 00. Theme Reset Css */
+#recent-blog .post-content .post-title a ,
+.section-header h2 {
+    color: #db2723 ;
+}
+
+.section-header h2:after {
+    background: #db2723 ;    
+}
+
+.boxed-btn {
+    background: #db2723 ;    
+}
+
+.boxed-btn:hover {
+    color: #db2723 ;    
+}
+
+/* 02. Header Top */
+#header-top {
+    background: #db2723 ;    
+}
+
+/* 03. Custom Navigation */
+.main-menu ul li.active a,
+.main-menu ul li a:hover {
+    color: #db2723  !important;
+}
+
+.main-menu ul li ul li:hover:before {
+    color: #db2723 ;
+}
+
+.main-menu ul li.active ul li a:hover { 
+    color: #db2723  !important;
+}
+
+.main-menu ul li a:after,
+.main-menu ul li a:before {
+    border-color: #db2723  !important;
+}
+
+
+.mean-container a.meanmenu-reveal {
+   border-color: #db2723 !important;
+    color: #db2723 !important;
+}
+
+.mean-container a.meanmenu-reveal span {
+    background-color: #db2723 !important;
+}
+
+.mean-container .mean-nav {
+    background: #db2723 !important;    
+}
+
+.search-button a {
+    color: #db2723 ;
+}
+
+a.book-now {
+    border-color: #db2723 ;
+	background: #db2723;
+}
+
+.search-button a.nav-link {
+    color: #db2723 ;
+}
+
+#search {
+    background: #db2723 ;    
+}
+
+/* 05. Features */
+
+.features-list-item .icon i {
+    color: #db2723 ;
+}
+
+.view-more {
+    color: #db2723 ;
+}
+
+/* 07. Features */
+.features-item:before {    
+    background: #db2723 ;
+}
+
+.features-item:hover i {
+    color: #db2723 ;
+}
+
+/* 08. Services */
+.service-icon i {
+    color: #db2723 ;
+}
+
+.services-item .service-icon:after {
+    background: #db2723 ;    
+}
+
+.services-item:hover h4 {
+    color: #db2723 ;
+}
+
+/* Testimonial */
+.single-testimonial h4 {
+    color: #db2723 ;
+}
+
+.single-testimonial h4:after {
+    background: #db2723 ;    
+}
+
+
+/* Recent Blog */
+#recent-blog .post-thumbnail:after {
+    background: #db2723 ;    
+}
+
+#recent-blog .blog-post:hover .read-more-link,
+.blog-post:hover .post-content .post-title a {
+    color: #db2723 ;
+}
+
+#footer-copyright {
+    background: #db2723 ;
+}
+
+.scrollup {
+    background-color: #db2723 ;
+    border-color: #db2723 ;
+
+}
+
+.scrollup:hover,
+.scrollup:focus {
+    background-color: #db2723 ;
+    border-color: #db2723 ;
+}
+
+/*------------------------
+    Blog
+-------------------------*/
+.blog-post:hover h4.post-title a {
+    color: #db2723  !important;
+}
+
+.post-content .continue-reading:hover {
+    color: #db2723  !important;
+}
+
+#blog-content ul.meta-info li:hover i,
+#blog-content ul.meta-info li a:hover {
+    color: #db2723 ;
+}
+
+.blog-post .post-thumb {
+    background: #db2723 ;    
+}
+
+.post-new-comment input,
+.post-new-comment textarea {
+    border-color: #db2723 ;
+}
+
+.single-blog-area ul.share-icon li a:hover {
+    color: #db2723 ;
+}
+
+/* Widget Color */
+
+.widget_about a:hover {
+    color: #db2723 ;
+}
+
+.widget_pages ul li a:hover {
+    color: #db2723 ;
+}
+
+.sidebar .widget_search input[type=button],
+.sidebar .widget_search input[type=submit] {
+    background: #db2723 ;
+}
+
+.sidebar .widget_recent_entries ul li a:hover,
+.sidebar .widget_recent_comments ul li a:hover,
+.sidebar .widget_archive ul li a:hover,
+.sidebar .widget_categories ul li a:hover,
+.sidebar .widget_meta ul li a:hover {
+	color: #db2723 ;
+}
+
+.footer-sidebar .widget_search input[type=button],
+.footer-sidebar .widget_search input[type=submit],
+.footer-sidebar .widget_search input[type=submit]:hover {
+    background: #db2723 ;
+}
+.footer-sidebar .widget_recent_entries ul li a:hover,
+.footer-sidebar .widget_recent_comments ul li a:hover,
+.footer-sidebar .widget_archive ul li a:hover,
+.footer-sidebar .widget_categories ul li a:hover,
+.footer-sidebar .widget_meta ul li a:hover {
+	color: #db2723 ;
+}
+.recent-post h6:hover {
+    color: #db2723 ;
+}
+
+ul.recent-meta-info li a:hover {
+    color: #db2723 ;
+}
+
+.days li .active {
+    color: #db2723 ;
+    border-color: #db2723 ;
+}
+
+.widget-newsletter .subscribe {
+    color: #db2723 ;
+    border-color: #db2723 ;
+}
+
+.widget-newsletter .subscribe:hover {
+    background: #db2723 ;
+}
+
+
+ul.widget-social li a:hover {
+    color: #db2723 ;
+}
+
+ul.tags li a:hover {    
+    background: #db2723 ;
+}
+em, cite, q {
+    color: #db2723 ;
+}
+a {
+    color: #db2723 ;
+}
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"] {
+    border: 1px solid #db2723 ;
+}
+table th {
+    background: #db2723 ;
+}
+blockquote {
+    border-left: 5px solid #db2723  !important;
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+    background: #db2723 !important;
+}
+
+.sidebar .widget table tbody a {
+    color: #db2723 ;
+    border-color: #db2723 ;
+}
+.widget_tag_cloud a:hover {
+    background: #db2723 ;
+}
+.footer-sidebar .widget table tbody a { 
+	color: #db2723 ;
+    border-color: #db2723 ;
+}
+.widget_about a:hover {
+    color: #db2723 ;
+}
+textarea {
+	border: 1px solid #db2723 ;
+}
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"] {
+    border: 1px solid #db2723 ;
+}
+.blog-author-social a {
+    color: #db2723 ;
+}
+.paginations a:hover, .paginations a:focus, .paginations a.active, span.page-numbers.current {
+	background:#db2723 ;
+}
+a.page-numbers {
+    color: #db2723 ;
+}
+
+.textwidget a:hover {
+    color: #db2723 ;
+}
+
+.boxed-btn:hover {
+    color: #db2723 ;
+}
+.search-result .posts-navigation .nav-links a {
+    background: #db2723 ;
+}
+/*=========================================
+    Secondary Color
+=========================================*/
+/* Theme Reset css */
+button, input[type="button"]:hover, input[type="reset"]:hover {
+    background: #242424!important;
+}
+p {
+    color: #242424;
+}
+
+.section-header p {
+    color: #242424;
+}
+
+/* Main Menu*/
+.mean-container .mean-nav ul li a.mean-expand:hover {
+    background: #242424;
+}
+
+/* Features list*/
+.features-list-item h4 {
+    color: #242424;
+}
+
+.view-more:hover {
+    color: #242424;
+}
+
+.sorting-btn li a {
+    color: #242424;
+}
+
+.services-item {    
+    color: #242424;
+}
+
+.single-testimonial {
+    background: #242424; 
+}
+
+#recent-blog .read-more-link {
+    color: #242424;    
+}
+
+.gallery-item figure:hover figcaption {
+    background: #242424;
+}
+
+#blog-content .post-title a {
+    color: #242424;
+}
+
+#blog-content ul.meta-info li {
+    color: #242424;
+}
+
+#blog-content ul.meta-info li a {
+    color: #242424;
+}
+
+.post-content .content {
+    color: #242424;
+}
+
+#blog-content .post-content .continue-reading {
+    color: #242424;
+}
+
+.single-blog-area .post-title {
+    color: #242424;
+}
+
+.single-blog-area ul.share-icon li a {
+    color: #242424;
+}
+
+.post-comment-area .comment-author a {
+    color: #242424;
+}
+
+.office h4 {
+    color: #242424;
+}
+
+.office ul li {
+    color: #242424;
+}
+
+#wrapper-404 .inner-content h1 {
+    color: #242424;
+}
+
+#wrapper-404 .inner-content p {
+    color: #242424;
+}
+
+/*Widget CSS */
+
+#footer-widgets,
+.widget-search input[type=button]:hover,
+form.search-form .search-submit:hover {
+    background: #242424;
+}
+
+
+.widget_search .search-form,
+.search-form input[type="search"]::-webkit-input-placeholder,
+.sidebar .widget-title,
+.widget_categories ul li a,
+.recent-post h6,
+ul.recent-meta-info li,
+ul.recent-meta-info li a,
+ul.tags li a,
+.widget-calender .widget-title .plus a,
+.weekdays li,
+.days li.disable,
+.days li {
+    color: #242424;
+
+}
+
+/* new */
+.sidebar .widget table caption { 
+    color: #242424; 
+}
+.sidebar .widget table td, .widget table th { 
+	color: #242424;
+}
+.sidebar .widget_archive ul li a {
+	color: #242424;
+}
+.sidebar .widget-title {
+	color: #242424;
+}
+.sidebar .widget_meta ul li a {
+	color: #242424;
+}
+.sidebar .widget_recent_entries ul li a {
+	color: #242424; 
+}
+.sidebar .widget_recent_comments ul li a {
+	color: #242424; 
+}
+.widget_categories ul li a {
+	color: #242424; 
+}
+.widget_tag_cloud a {
+    color: #242424;
+}
+.footer-sidebar .widget-title {
+	color: #242424; 
+}
+.footer-sidebar .widget table caption { 
+    color: #242424; 
+}
+.footer-sidebar .widget table th { 
+    color:#242424; 
+}
+.footer-sidebar .widget table td, .widget table th { 
+	color: #242424;
+} 
+.gallery-item .gallery-caption {
+    color: #242424;
+}
+.pagination a {
+    background: #242424;
+}

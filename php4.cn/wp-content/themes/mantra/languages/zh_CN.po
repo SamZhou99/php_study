@@ -1,0 +1,2104 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Mantra International\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-10 15:58+0800\n"
+"PO-Revision-Date: 2013-03-10 20:18+0800\n"
+"Last-Translator: yiranboke\n"
+"Language-Team: Cryout Creations <contact@htx.ro>\n"
+"Language: Chinese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_n:1,2;_x;_ex;_nx;"
+"esc_attr__;esc_attr_e;_n_noop;_nx_noop\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2;plural=n>1;\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:17
+msgid "Not Found"
+msgstr "找不到。"
+
+#: 404.php:19
+msgid ""
+"Apologies, but the page you requested could not be found. Perhaps searching "
+"will help."
+msgstr "抱歉，找不到您请求的页面。也许搜索功能对您有帮助。"
+
+#: archive.php:25
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "每日归档: %s"
+
+#: archive.php:27
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "月度归档: %s"
+
+#: archive.php:27
+msgid "F Y"
+msgstr "F Y"
+
+#: archive.php:29
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "年度归档: %s"
+
+#: archive.php:29
+msgid "Y"
+msgstr "Y"
+
+#: archive.php:31
+msgid "Blog Archives"
+msgstr "博客归档"
+
+#: archive.php:57 author.php:74 category.php:50 index.php:41 search.php:40
+#: tag.php:51 template-blog.php:36
+msgid "Nothing Found"
+msgstr "什么都没找到"
+
+#: archive.php:61 author.php:78 category.php:54 index.php:45 tag.php:55
+#: template-blog.php:40
+msgid ""
+"Apologies, but no results were found for the requested archive. Perhaps "
+"searching will help find a related post."
+msgstr "抱歉，未找到您搜索的文章。也许您可以换个关键词试试。"
+
+#: attachment.php:18
+#, php-format
+msgid "Return to %s"
+msgstr "回到 %s"
+
+#: attachment.php:29
+msgid "By"
+msgstr "由"
+
+#: attachment.php:33 includes/theme-loop.php:147
+#, php-format
+msgid "View all posts by %s"
+msgstr "查看 %s 的所有文章"
+
+#: attachment.php:40
+msgid "Published"
+msgstr "已发表"
+
+#: attachment.php:50
+#, php-format
+msgid "Full size is %s pixels"
+msgstr "完整图片大小为 %s 像素"
+
+#: attachment.php:53
+msgid "Link to full-size image"
+msgstr "查看完整图片"
+
+#: attachment.php:60 attachment.php:107 content-aside.php:48
+#: content-chat.php:49 content-gallery.php:65 content-image.php:42
+#: content-link.php:49 content-page.php:22 content-quote.php:46
+#: content-status.php:48 content.php:77 single.php:53
+#: template-onecolumn.php:27
+msgid "Edit"
+msgstr "编辑"
+
+#: attachment.php:100
+msgid "Continue reading"
+msgstr "阅读全文"
+
+#: attachment.php:101 content-aside.php:39 content-chat.php:38
+#: content-gallery.php:55 content-image.php:33 content-link.php:38
+#: content-page.php:21 content-quote.php:36 content-status.php:39
+#: content.php:49 content.php:66 single.php:31 template-onecolumn.php:26
+msgid "Pages:"
+msgstr "页码:"
+
+#: author.php:28
+#, php-format
+msgid "Author Archives: %s"
+msgstr "作者归档: %s"
+
+#: author.php:49 single.php:40
+#, php-format
+msgid "About %s"
+msgstr "关于 %s"
+
+#: category.php:19
+#, php-format
+msgid "Category Archives: %s"
+msgstr "分类归档 %s"
+
+#: comments.php:18
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr "本文受密码保护。想查看评论，请输入密码。"
+
+#: content-aside.php:16 content-chat.php:16 content-gallery.php:16
+#: content-gallery.php:49 content-image.php:15 content-link.php:16
+#: content-quote.php:14 content-status.php:15 content.php:20
+#, php-format
+msgid "Permalink to %s"
+msgstr "链接到 %s "
+
+#: content-aside.php:20
+msgid "Aside"
+msgstr ""
+
+#: content-aside.php:38 content-chat.php:37 content-gallery.php:33
+#: content-image.php:32 content-link.php:37 content-quote.php:35
+#: content-status.php:38
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "阅读全文 <span class=\"meta-nav\">&rarr;</span>"
+
+#: content-aside.php:46 content-chat.php:45 content-gallery.php:62
+#: content-image.php:39 content-link.php:45 content-quote.php:43
+#: content-status.php:46 content.php:75 includes/theme-loop.php:185
+msgid "Tagged"
+msgstr "标签:"
+
+#: content-chat.php:20
+msgid "Chat"
+msgstr "聊天"
+
+#: content-gallery.php:20
+msgid "Gallery"
+msgstr "相册"
+
+#: content-gallery.php:48
+#, php-format
+msgid "This gallery contains <a %1$s>%2$s photo</a>."
+msgid_plural "This gallery contains <a %1$s>%2$s photos</a>."
+msgstr[0] "该相册含 <a %1$s>%2$s 张照片</a>。"
+msgstr[1] "该相册含 <a %1$s>%2$s 张照片</a>。"
+
+#: content-image.php:19 admin/settings.php:462 admin/settings.php:477
+#: admin/settings.php:492 admin/settings.php:507 admin/settings.php:522
+#: admin/settings.php:565 admin/settings.php:580 admin/settings.php:595
+#: admin/settings.php:610
+msgid "Image"
+msgstr "图片"
+
+#: content-link.php:20 admin/settings.php:469 admin/settings.php:484
+#: admin/settings.php:499 admin/settings.php:514 admin/settings.php:529
+#: admin/settings.php:572 admin/settings.php:587 admin/settings.php:602
+#: admin/settings.php:617
+msgid "Link"
+msgstr "链接"
+
+#: content-page.php:27 includes/theme-comments.php:136
+msgid "Comments are closed."
+msgstr "评论被关闭。"
+
+#: content-quote.php:18
+msgid "Quote"
+msgstr "引用"
+
+#: content-status.php:30
+msgid "Status"
+msgstr "状态"
+
+#: search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr "%s 的搜索结果"
+
+#: search.php:38
+#, php-format
+msgid "No search results for: %s"
+msgstr "没有 %s 的搜索结果"
+
+#: searchform.php:1
+msgid "Search"
+msgstr "搜索"
+
+#: single.php:44
+msgid "View all posts by "
+msgstr "查看所有文章:"
+
+#: tag.php:20
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "标签归档: %s"
+
+#: admin/admin-functions.php:62
+msgid ""
+"Before you can upload your import file, you will need to fix the following "
+"error:"
+msgstr "请在上传导入文件前修复以下错误:"
+
+#: admin/admin-functions.php:70
+msgid "Import Mantra Theme Options"
+msgstr "导入Mantra主题设置"
+
+#: admin/admin-functions.php:72
+msgid ""
+"Hi! This is where you import the  Mantra settings.<i> Please remember that "
+"this is still an experimental feature.</i>"
+msgstr "Hi！在这里导入Mantra设置。<i>请记住：这仍然是一项实验中的功能</i>"
+
+#: admin/admin-functions.php:74
+msgid "Just choose a file from your computer:"
+msgstr "从你的电脑中选择文件"
+
+#: admin/admin-functions.php:76
+#, php-format
+msgid "Maximum size: %s"
+msgstr "最大尺寸： %s"
+
+#: admin/admin-functions.php:82
+msgid "And import!"
+msgstr "导入！"
+
+#: admin/admin-functions.php:148
+msgid "Import Mantra Theme Options "
+msgstr "导入Mantra主题设置"
+
+#: admin/admin-functions.php:151
+msgid "Great! The options have been imported!"
+msgstr "很好！已经成功导入设置！"
+
+#: admin/admin-functions.php:152
+msgid "Go back to the Mantra options page and check them out!"
+msgstr "回到Mantra主题设置页面并且检查"
+
+#: admin/admin-functions.php:155 admin/admin-functions.php:161
+#: admin/admin-functions.php:167
+msgid "Oops, there's a small problem."
+msgstr "糟糕！出了小问题了。"
+
+#: admin/admin-functions.php:156
+msgid ""
+"The uploaded file does not contain valid Mantra options. Make sure the file "
+"is exported from the Mantra Options page."
+msgstr ""
+"上传的文件不含有效的Mantra主题设置。请确保文件是从Mantra主题设置页面导出的。"
+
+#: admin/admin-functions.php:162
+msgid "The uploaded file could not be read."
+msgstr "不能读取上传文件。"
+
+#: admin/admin-functions.php:168
+msgid ""
+"The uploaded file is not supported. Make sure the file was exported from the "
+"Mantra page and that it is a text file."
+msgstr ""
+"不支持的上传文件类型。请确保该文件是从Mantra主题设置页面导出的和它是一个文本"
+"文件。"
+
+#: admin/admin-functions.php:177
+msgid ""
+"Oops! The file is empty or there was no file. This error could also be "
+"caused by uploads being disabled in your php.ini or by post_max_size being "
+"defined as smaller than upload_max_filesize in php.ini."
+msgstr ""
+"哎哟！文件是空的或者没有文件。这个错误或许是因为你的php.ini禁止上传，也或者定"
+"义的post_max_size比php.ini中的upload_max_filesize要小。"
+
+#: admin/admin-functions.php:183
+msgid "ERROR: You are not authorised to perform that operation"
+msgstr "错误: 您未被授权进行此操作。"
+
+#: admin/main.php:93
+msgid "Layout Settings"
+msgstr "布局设置"
+
+#: admin/main.php:94
+msgid "Presentation Page"
+msgstr "演示页面"
+
+#: admin/main.php:95
+msgid "Text Settings"
+msgstr "文字设置"
+
+#: admin/main.php:96
+msgid "Color Settings"
+msgstr "颜色设置"
+
+#: admin/main.php:97
+msgid "Graphics Settings"
+msgstr "图像设置"
+
+#: admin/main.php:98
+msgid "Post Information Settings"
+msgstr "文章信息设置"
+
+#: admin/main.php:99
+msgid "Post Excerpt Settings"
+msgstr "文章摘要设置"
+
+#: admin/main.php:100
+msgid "Featured Image Settings"
+msgstr "特色图片设置"
+
+#: admin/main.php:101
+msgid "Social Media Settings"
+msgstr "社交媒体设置"
+
+#: admin/main.php:102
+msgid "Miscellaneous Settings"
+msgstr "杂项设置"
+
+#: admin/main.php:104
+msgid "Main Layout"
+msgstr "主布局"
+
+#: admin/main.php:105
+msgid "Content / Sidebar Width"
+msgstr "内容/工具栏宽度"
+
+#: admin/main.php:106
+msgid "Header Image Height"
+msgstr "顶部图片高度"
+
+#: admin/main.php:108
+msgid "Enable Presentation Page"
+msgstr "允许演示页面"
+
+#: admin/main.php:109
+msgid "Slider Settings"
+msgstr "幻灯片设置。"
+
+#: admin/main.php:110
+msgid "Slides"
+msgstr "幻灯片"
+
+#: admin/main.php:111
+msgid "Presentation Page Columns"
+msgstr "演示页面下方栏目"
+
+#: admin/main.php:112
+msgid "Extras"
+msgstr "附加"
+
+#: admin/main.php:114
+msgid "General Font"
+msgstr "一般字体"
+
+#: admin/main.php:115
+msgid "General Font Size"
+msgstr "一般字体大小"
+
+#: admin/main.php:116
+msgid "Post Title Font "
+msgstr "文章标题字体"
+
+#: admin/main.php:117
+msgid "Post Title Font Size"
+msgstr "文章标题字体大小"
+
+#: admin/main.php:118
+msgid "Sidebar Font"
+msgstr "工具栏字体"
+
+#: admin/main.php:119
+msgid "SideBar Font Size"
+msgstr "工具栏字体大小"
+
+#: admin/main.php:120
+msgid "Sub-Headers Font"
+msgstr "亚头部字体"
+
+#: admin/main.php:121
+msgid "Force Text Align"
+msgstr "文本对齐方式。"
+
+#: admin/main.php:122
+msgid "Paragraph indent"
+msgstr "段落缩进"
+
+#: admin/main.php:123
+msgid "Header indent"
+msgstr "头部缩进"
+
+#: admin/main.php:124
+msgid "Line Height"
+msgstr "段高"
+
+#: admin/main.php:125
+msgid "Word spacing"
+msgstr "词间距"
+
+#: admin/main.php:126
+msgid "Letter spacing"
+msgstr "字母间距"
+
+#: admin/main.php:127
+msgid "Text shadow"
+msgstr "文字阴影"
+
+#: admin/main.php:129
+msgid "Background Color"
+msgstr "背景颜色"
+
+#: admin/main.php:130
+msgid "Header (Banner and Menu) Background Color"
+msgstr "顶部（banner和菜单）背景颜色。"
+
+#: admin/main.php:131
+msgid "Content Background Color"
+msgstr "内容背景颜色"
+
+#: admin/main.php:132
+msgid "Menu Background Color"
+msgstr "菜单背景颜色"
+
+#: admin/main.php:133
+msgid "First Sidebar Background Color"
+msgstr "第一工具栏背景颜色"
+
+#: admin/main.php:134
+msgid "Second Sidebar Background Color"
+msgstr "第二工具栏背景颜色"
+
+#: admin/main.php:136
+msgid "Site Title Color"
+msgstr "网站标题颜色"
+
+#: admin/main.php:137
+msgid "Site Description Color"
+msgstr "网站描述颜色"
+
+#: admin/main.php:139
+msgid "Content Text Color"
+msgstr "内容文字颜色"
+
+#: admin/main.php:140
+msgid "Links Color"
+msgstr "链接颜色"
+
+#: admin/main.php:141
+msgid "Links Hover Color"
+msgstr "链接悬停时颜色"
+
+#: admin/main.php:142
+msgid "Post Title Color"
+msgstr "文章标题颜色"
+
+#: admin/main.php:143
+msgid "Post Title Hover Color"
+msgstr "文章标题悬停时颜色"
+
+#: admin/main.php:144
+msgid "Sidebar Header Background Color"
+msgstr "工具栏头部背景颜色"
+
+#: admin/main.php:145
+msgid "Sidebar Header Text Color"
+msgstr "工具栏头部文字颜色"
+
+#: admin/main.php:146
+msgid "Footer Widget Background Color"
+msgstr "底部小工具栏背景颜色"
+
+#: admin/main.php:147
+msgid "Footer Background Color"
+msgstr "底部背景颜色"
+
+#: admin/main.php:148
+msgid "Footer Widget Header Text Color"
+msgstr "底部小工具栏头部文字颜色"
+
+#: admin/main.php:149
+msgid "Footer Widget Link Color"
+msgstr "底部小工具栏颜色"
+
+#: admin/main.php:150
+msgid "Footer Widget Hover Color"
+msgstr "底部小工具悬停时颜色。"
+
+#: admin/main.php:152
+msgid "Caption Border"
+msgstr "说明文字边框"
+
+#: admin/main.php:153
+msgid "Post Images Border"
+msgstr "文章图片边框"
+
+#: admin/main.php:154
+msgid "Caption Pin"
+msgstr "说明文字针头"
+
+#: admin/main.php:155
+msgid "Sidebar Menu Bullets"
+msgstr "工具栏菜单箭头"
+
+#: admin/main.php:156
+msgid "Meta Area Background"
+msgstr "Meta区域背景"
+
+#: admin/main.php:157
+msgid "Post Separator"
+msgstr "文章分割器"
+
+#: admin/main.php:158
+msgid "Content List Bullets"
+msgstr "内容列表箭头"
+
+#: admin/main.php:159
+msgid "Title and Description"
+msgstr "标题和描述"
+
+#: admin/main.php:160
+msgid "Page Titles"
+msgstr "页面标题"
+
+#: admin/main.php:161
+msgid "Category Page Titles"
+msgstr "分类页面标题"
+
+#: admin/main.php:162
+msgid "Hide Tables"
+msgstr "隐藏表单"
+
+#: admin/main.php:163
+msgid "Back to Top button"
+msgstr "回到顶部按钮"
+
+#: admin/main.php:164
+msgid "Text Under Comments"
+msgstr "评论下方文字"
+
+#: admin/main.php:165
+msgid "Comments are closed text"
+msgstr "评论被关闭"
+
+#: admin/main.php:166
+msgid "Comments off"
+msgstr "评论关闭"
+
+#: admin/main.php:167
+msgid "Custom Footer Text"
+msgstr "自定义底部文本"
+
+#: admin/main.php:169
+msgid "Post Comments Link"
+msgstr "文章评论链接"
+
+#: admin/main.php:170
+msgid "Post Date"
+msgstr "文章日期"
+
+#: admin/main.php:171
+msgid "Post Time"
+msgstr "文章时间"
+
+#: admin/main.php:172
+msgid "Post Author"
+msgstr "文章作者"
+
+#: admin/main.php:173
+msgid "Post Category"
+msgstr "文章分类"
+
+#: admin/main.php:174
+msgid "Post Tags"
+msgstr "文章标签"
+
+#: admin/main.php:175
+msgid "Post Permalink"
+msgstr "文章链接"
+
+#: admin/main.php:176
+msgid "All Post Metas"
+msgstr "所有文章Meta信息"
+
+#: admin/main.php:178
+msgid "Post Excerpts on Home Page"
+msgstr "主页文章摘要"
+
+#: admin/main.php:179
+msgid "Affect Sticky Posts"
+msgstr "置顶文章"
+
+#: admin/main.php:180
+msgid "Post Excerpts on Archive and Category Pages"
+msgstr "归档和分类页的文章摘要。"
+
+#: admin/main.php:181
+msgid "Number of Words for Post Excerpts "
+msgstr "文章摘要字数"
+
+#: admin/main.php:182
+msgid "Magazine Layout"
+msgstr "杂志布局"
+
+#: admin/main.php:183
+msgid "Excerpt suffix"
+msgstr "摘要后缀"
+
+#: admin/main.php:184
+msgid "Continue reading link text "
+msgstr "“Continue reading”链接文字"
+
+#: admin/main.php:185
+msgid "HTML tags in Excerpts"
+msgstr "摘要中的HTML标签"
+
+#: admin/main.php:187
+msgid "Featured Images as POST Thumbnails "
+msgstr "作为文章缩略图的特色图片"
+
+#: admin/main.php:188
+msgid "Auto Select Images From Posts "
+msgstr "从文章中自动选择图片"
+
+#: admin/main.php:189
+msgid "Thumbnails Alignment "
+msgstr "缩略图对齐方式"
+
+#: admin/main.php:190
+msgid "Thumbnails Size "
+msgstr "缩略图大小"
+
+#: admin/main.php:191
+msgid "Featured Images as HEADER Images "
+msgstr "作为顶部图片的特色图片"
+
+#: admin/main.php:193
+msgid "Link nr. 1"
+msgstr "链接 1"
+
+#: admin/main.php:194
+msgid "Link nr. 2"
+msgstr "链接 2"
+
+#: admin/main.php:195
+msgid "Link nr. 3"
+msgstr "链接 3"
+
+#: admin/main.php:196
+msgid "Link nr. 4"
+msgstr "链接 4"
+
+#: admin/main.php:197
+msgid "Link nr. 5"
+msgstr "链接 5"
+
+#: admin/main.php:198
+msgid "Socials display"
+msgstr "显示社交媒体"
+
+#: admin/main.php:200
+msgid "Make Site Header a Link"
+msgstr "使用网站名字链接"
+
+#: admin/main.php:201
+msgid "Breadcrumbs"
+msgstr "面包屑"
+
+#: admin/main.php:202
+msgid "Pagination"
+msgstr "页码"
+
+#: admin/main.php:203
+msgid "Mobile view"
+msgstr "移动设备视图"
+
+#: admin/main.php:204
+msgid "FavIcon"
+msgstr "FavIcon"
+
+#: admin/main.php:205
+msgid "Custom CSS"
+msgstr "自定义CSS"
+
+#: admin/main.php:206
+msgid "Custom JavaScript"
+msgstr "自定义Javascript"
+
+#: admin/main.php:207
+msgid "SEO Settings"
+msgstr "SEO设置"
+
+#: admin/main.php:224
+msgid "Sorry, but you do not have sufficient permissions to access this page."
+msgstr "抱歉，您没有足够的权限访问此页面。"
+
+#: admin/main.php:234
+msgid "Mantra settings updated successfully."
+msgstr "Mantra设置更新成功"
+
+#: admin/main.php:245
+msgid "Reset to Defaults"
+msgstr "恢复默认"
+
+#: admin/main.php:246
+msgid "Save Changes"
+msgstr "保存修改"
+
+#: admin/main.php:260
+msgid ""
+"<p>Here at Cryout Creations (the developers of yours truly Mantra Theme), we "
+"spend night after night improving the Mantra Theme. We fix a lot of bugs "
+"(that we previously created); we add more and more customization options "
+"while also trying to keep things as simple as possible; then... we might "
+"play a game or two but rest assured that we return to read and (in most "
+"cases) reply to your late night emails and comments, take notes and draw "
+"dashboards of things to implement in future versions.</p>\n"
+"\t\t\t<p>So you might ask yourselves: <i>How do they do it? How can they "
+"keep so fresh after all that hard labor for that darned theme? </i> Well "
+"folks, it's simple. We drink coffee. Industrial quantities of hot boiling "
+"coffee. We love it! So if you want to help with the further development of "
+"the Mantra Theme...</p> "
+msgstr ""
+"<p>我们在 Cryout Creations (Mantra 主题的开发商), 日以继夜地完善Mantra主题。"
+"我们修复了大量bug(这是我们以前所造成的); Here at Cryout Creations (Mantra 主"
+"题的开发者), 我们日以继夜地完善Mantra主题。我们修复了大量bug(这是我们以前所造"
+"成的);我们在尽可能保持主题简单的同时，不断添加更多的自定义选项。然后。。。我"
+"们现在就像在玩一场博弈，但请放心，我们回去会读和回复你们昨晚的email和评论，做"
+"好记录，并且在未来的版本进行实施。</p>\n"
+"<p>因此，你可能会问你自己: <i>他们是如何做到这一点的? 他们在为主题辛苦工作后"
+"是如何保持精力充沛的？</i> 伙计，这很简单。我们喝咖啡了。大量的热煮咖啡。我们"
+"非常喜欢。因此，如果你想帮助Mantra主题的后续开发...</p> "
+
+#: admin/main.php:275
+msgid "Import/Export Settings"
+msgstr "导入/导出设置"
+
+#: admin/main.php:281
+msgid "Export Theme options"
+msgstr "导出主题选项"
+
+#: admin/main.php:282
+msgid ""
+"It's that easy: a mouse click away - the ability to export your Mantra "
+"settings and save them on your computer. Feeling safer? You should!"
+msgstr ""
+"那很容易：点击鼠标——导出你的Mantra主题设置，并保存到电脑。感到更加保险？的确"
+"应该这样子。"
+
+#: admin/main.php:287
+msgid "Import Theme options"
+msgstr "导入主题设置"
+
+#: admin/main.php:288
+msgid ""
+" Without the import, the export would just be a fool's exercise. Make sure "
+"you have the exported file ready and see you after the mouse click."
+msgstr "没有导入，导出就像是一个傻子在运动。确保你已经准备好导出文件。"
+
+#: admin/main.php:295
+msgid "Mantra Latest News"
+msgstr "Mantra的最新消息"
+
+#: admin/main.php:306
+msgid "No news items."
+msgstr "无新闻内容"
+
+#: admin/main.php:320
+msgid "Mantra Help"
+msgstr "Mantra帮助"
+
+#: admin/main.php:323
+msgid ""
+"\n"
+"\t\t\t<ul>\n"
+"\t\t\t\t<li>- Need any Mantra or WordPress help?</li>\n"
+"\t\t\t\t<li>- Want to know what changes are made to the theme with each new "
+"version?</li>\n"
+"\t\t\t\t<li>- Found a bug or maybe something doesn't work exactly as "
+"expected?</li>\n"
+"\t\t\t\t<li>- Got an idea on how to improve the Mantra Theme to better suit "
+"your needs?</li>\n"
+"\t\t\t\t<li>- Want a setting implemented?</li>\n"
+"\t\t\t\t<li>- Do you have or would you like to make a translation of the "
+"Mantra Theme?</li>\n"
+"\t\t\t</ul>\n"
+"\t\t\t<p>Then come visit us at Mantra's support page.</p>\n"
+"\t"
+msgstr ""
+"\n"
+"\t\t\t<ul>\n"
+"\t\t\t\t<li>- 需要关于Mantra或者Wordpress方面的帮助?</li>\n"
+"\t\t\t\t<li>- 想知道主题的每一个版本有什么更改?</li>\n"
+"\t\t\t\t<li>- 发现bug或者有些东西不想预期中那样准确?</li>\n"
+"\t\t\t\t<li>- 有一个如何改进Mantra主题一更好适应你的需求的想法??</li>\n"
+"\t\t\t\t<li>- 要想设置生效?</li>\n"
+"\t\t\t\t<li>- 你已经或者你想对Mantra主题进行翻译?</li>\n"
+"\t\t\t</ul>\n"
+"\t\t\t<p>那么，访问我们Mantra主题的支持页面.</p>\n"
+"\t"
+
+#: admin/main.php:334
+msgid "Mantra Support Page"
+msgstr "Manta支持页面"
+
+#: admin/settings.php:61
+msgid "One column (no sidebars)"
+msgstr "一栏式（无边栏）"
+
+#: admin/settings.php:62
+msgid "Two columns,  sidebar on the right"
+msgstr "两栏式，工具栏在右"
+
+#: admin/settings.php:63
+msgid "Two columns,  sidebar on the left"
+msgstr "两栏式，工具栏在左"
+
+#: admin/settings.php:64
+msgid "Three columns, sidebars on the right"
+msgstr "三栏式，工具栏在右"
+
+#: admin/settings.php:65
+msgid "Three columns, sidebars on the left"
+msgstr "三栏式，工具栏在左"
+
+#: admin/settings.php:66
+msgid "Three columns, one sidebar on each side"
+msgstr "三栏式，两侧各有一个工具栏"
+
+#: admin/settings.php:81
+msgid "Choose your layout "
+msgstr "选择你的布局"
+
+#: admin/settings.php:89
+msgid "Absolute"
+msgstr "绝对"
+
+#: admin/settings.php:89
+msgid "Relative"
+msgstr "相对"
+
+#: admin/settings.php:90
+msgid "Dimensions to use: "
+msgstr "使用的量度"
+
+#: admin/settings.php:189 admin/settings.php:209
+msgid "Content ="
+msgstr "内容 ="
+
+#: admin/settings.php:190 admin/settings.php:210
+msgid "Sidebar(s) ="
+msgstr "工具栏(s) ="
+
+#: admin/settings.php:191 admin/settings.php:211
+msgid "Total width ="
+msgstr "总宽度 ="
+
+#: admin/settings.php:200
+msgid ""
+"Select the width of your <b>content</b> and <b>sidebar(s)</b>. \n"
+" \t\tWhile the content cannot be less than 500px wide, the sidebar area is "
+"at least 220px and no more than 800px.<br />\n"
+"\tIf you went for a 3 column area ( with 2 sidebars) they will each have "
+"half the selected width."
+msgstr ""
+"选择<b>内容</b>和<b>工具栏(s)</b>的宽度。内容部分的宽度至少为500px，工具栏最"
+"小宽度为220px，最大宽度为800px。<br />如果你选择了三栏式（两列工具栏），那么"
+"每列工具栏的宽度为所设置的宽度的一半。"
+
+#: admin/settings.php:220
+msgid ""
+"Select the width of your <b>content</b> and <b>sidebar(s)</b>. \n"
+" \t\tThese are realtive dimmensions - relative to the user's browser. The "
+"total width is a percentage of the browser's width.<br />\n"
+"\t While the content cannot be less than 40% wide, the sidebar area is at "
+"least 20% and no more than 50%.<br />\n"
+"\tIf you went for a 3 column area ( with 2 sidebars) they will each have "
+"half the selected width."
+msgstr ""
+"选择<b>内容</b> 和 <b>工具栏(s)</b>宽度。 \n"
+" \t\t 可以采用相对刻度——相对于用户的浏览器。总宽度取决于用户的浏览器。<br /"
+">\n"
+"\t  内容部分宽度不能低于40%，工具栏区域不能低于20%且不能高于50%。<br />\n"
+"\t 如果你选择了三栏式（两个工具栏），那么工具栏会评分所选择的尺寸。"
+
+#: admin/settings.php:244
+msgid ""
+"Select the header's height. After saving the settings go and upload your new "
+"header image. The header's width will be = "
+msgstr "选择顶部（header）的高度。保存设置后，上传新的顶部图片。宽度为 = "
+
+#: admin/settings.php:257 admin/settings.php:969 admin/settings.php:1031
+#: admin/settings.php:1367 admin/settings.php:1429 admin/settings.php:1637
+#: admin/settings.php:1666 admin/settings.php:1689 admin/settings.php:1712
+#: admin/settings.php:1761 admin/settings.php:1890 admin/settings.php:1905
+#: admin/settings.php:1920 admin/settings.php:1935 admin/settings.php:1977
+msgid "Enable"
+msgstr "允许"
+
+#: admin/settings.php:257 admin/settings.php:969 admin/settings.php:1031
+#: admin/settings.php:1367 admin/settings.php:1429 admin/settings.php:1637
+#: admin/settings.php:1666 admin/settings.php:1689 admin/settings.php:1712
+#: admin/settings.php:1761 admin/settings.php:1890 admin/settings.php:1905
+#: admin/settings.php:1920 admin/settings.php:1935 admin/settings.php:1977
+msgid "Disable"
+msgstr "禁用"
+
+#: admin/settings.php:265
+msgid ""
+"Enable the presentation front-page. This will become your new home page. It "
+"has a slider and columns for presentation\n"
+"\t\ttext and images.<br>If you have this enabled but don't see a "
+"Presentation page then go to <a href='options-reading.php'> Settings &raquo; "
+"Reading </a> and make sure you have selected <strong>Front Page Displays</"
+"strong> as <Strong>Your Latest Posts</strong>."
+msgstr ""
+"允许演示首页。该页面会成为网站的新首页。页面带有幻灯片和为演示准备的栏目文本"
+"和图片。<br>如果你已经选择了“允许”，但没有看到演示页面，那么到 <a "
+"href='options-reading.php'>设置 &raquo; 阅读 </a> 并且确保已经选择<Strong>你"
+"的最新文章</strong>作为<strong>首页显示</strong>。"
+
+#: admin/settings.php:275
+msgid "Slider Dimensions:"
+msgstr "幻灯片尺寸"
+
+#: admin/settings.php:276
+msgid "width"
+msgstr "宽"
+
+#: admin/settings.php:277
+msgid "height"
+msgstr "高"
+
+#: admin/settings.php:278
+msgid ""
+"The dimensions of your slider. Make sure your images are of the same size."
+msgstr "幻灯片的尺寸。确保你的图片的大小是一致的。"
+
+#: admin/settings.php:280
+msgid "Animation:"
+msgstr "动画："
+
+#: admin/settings.php:282
+msgid "Random"
+msgstr "随机"
+
+#: admin/settings.php:282
+msgid "Fold"
+msgstr "折叠"
+
+#: admin/settings.php:282
+msgid "Fade"
+msgstr "淡入/淡出"
+
+#: admin/settings.php:282
+msgid "SlideInRight"
+msgstr "右侧滑入"
+
+#: admin/settings.php:282
+msgid "SlideInLeft"
+msgstr "左侧滑入"
+
+#: admin/settings.php:282
+msgid "SliceDown"
+msgstr ""
+
+#: admin/settings.php:282
+msgid "SliceDownLeft"
+msgstr ""
+
+#: admin/settings.php:282
+msgid "SliceUp"
+msgstr ""
+
+#: admin/settings.php:282
+msgid "SliceUpLeft"
+msgstr ""
+
+#: admin/settings.php:282
+msgid "SliceUpDown"
+msgstr ""
+
+#: admin/settings.php:282
+msgid "SliceUpDownLeft"
+msgstr ""
+
+#: admin/settings.php:282
+msgid "BoxRandom"
+msgstr ""
+
+#: admin/settings.php:282
+msgid "BoxRain"
+msgstr ""
+
+#: admin/settings.php:282
+msgid "BoxRainReverse"
+msgstr ""
+
+#: admin/settings.php:282
+msgid "BoxRainGrow"
+msgstr ""
+
+#: admin/settings.php:282
+msgid "BoxRainGrowReverse"
+msgstr ""
+
+#: admin/settings.php:290
+msgid "The transition effect your slider will have."
+msgstr "幻灯片过渡效果"
+
+#: admin/settings.php:292
+msgid "Border Settings:"
+msgstr "边框设置。"
+
+#: admin/settings.php:293
+msgid "Width"
+msgstr "宽"
+
+#: admin/settings.php:294
+msgid "Color"
+msgstr "颜色"
+
+#: admin/settings.php:296
+msgid "The width and color of the slider's border."
+msgstr "幻灯片边框的宽度和颜色。"
+
+#: admin/settings.php:298
+msgid "Animation Time:"
+msgstr "动画时间："
+
+#: admin/settings.php:299 admin/settings.php:303
+msgid "milliseconds (1000ms = 1 second) "
+msgstr "毫秒（1000毫秒=1秒）"
+
+#: admin/settings.php:300
+msgid "The time in which the transition animation will take place."
+msgstr "图片过渡所需要的时间"
+
+#: admin/settings.php:302
+msgid "Pause Time:"
+msgstr "图片停留时间"
+
+#: admin/settings.php:304
+msgid "The time in which a slide will be still and visible."
+msgstr "单张幻灯片可以看到的时间"
+
+#: admin/settings.php:307
+msgid "Slider navigation:"
+msgstr "幻灯片导航"
+
+#: admin/settings.php:309
+msgid "Numbers"
+msgstr "数量"
+
+#: admin/settings.php:309
+msgid "Bullets"
+msgstr "箭头"
+
+#: admin/settings.php:309 admin/settings.php:1273
+msgid "None"
+msgstr "无"
+
+#: admin/settings.php:317
+msgid "Your slider navigation type. Shown under the slider."
+msgstr "幻灯片导航类型。像显示在幻灯片下方"
+
+#: admin/settings.php:319
+msgid "Slider arrows:"
+msgstr "幻灯片箭头"
+
+#: admin/settings.php:321
+msgid "Always Visible"
+msgstr "总是可见"
+
+#: admin/settings.php:321
+msgid "Visible on Hover"
+msgstr "悬停时可见"
+
+#: admin/settings.php:321
+msgid "Hidden"
+msgstr "隐藏"
+
+#: admin/settings.php:329
+msgid "The Left and Right arrows on your slider"
+msgstr "幻灯片向左向右箭头"
+
+#: admin/settings.php:370 admin/settings.php:438
+msgid "Select Category"
+msgstr "选择分类"
+
+#: admin/settings.php:397
+msgid "Custom Slides"
+msgstr "自定义幻灯片"
+
+#: admin/settings.php:397
+msgid "Latest Posts"
+msgstr "最新文章"
+
+#: admin/settings.php:397
+msgid "Random Posts"
+msgstr "随机文章"
+
+#: admin/settings.php:397
+msgid "Sticky Posts"
+msgstr "置顶文章"
+
+#: admin/settings.php:397
+msgid "Latest Posts from Category"
+msgstr "分类中的最新文章"
+
+#: admin/settings.php:397
+msgid "Random Posts from Category"
+msgstr "分类中随机文章"
+
+#: admin/settings.php:397
+msgid "Specific Posts"
+msgstr "指定文章"
+
+#: admin/settings.php:410
+msgid "Latest posts will be loaded into the slider."
+msgstr "最新文章会加载到幻灯片。"
+
+#: admin/settings.php:414
+msgid "Random  posts will be loaded into the slider."
+msgstr "随机文章会加载到幻灯片"
+
+#: admin/settings.php:418
+msgid "Latest posts from the category you choose will be loaded in the slider."
+msgstr "你选择的分类的最新文章会加载到幻灯片。"
+
+#: admin/settings.php:423
+msgid ""
+"Random posts from the category you choose will be loaded into the slider."
+msgstr "你选择的分类的随机文章会加载到幻灯片。"
+
+#: admin/settings.php:427
+msgid "Only sticky posts will be loaded into the slider."
+msgstr "只有置顶文章会加载到幻灯片。"
+
+#: admin/settings.php:431
+msgid "List the post IDs you want to display (separated by a comma): "
+msgstr "列出你想显示的文章ID（用英文逗号隔开）"
+
+#: admin/settings.php:436
+msgid "<br> Choose the cateogry: "
+msgstr "<br> 选择分类："
+
+#: admin/settings.php:453
+msgid "Number of posts to show:"
+msgstr "显示文章的数量："
+
+#: admin/settings.php:460
+msgid "Slide 1"
+msgstr "幻灯片 1"
+
+#: admin/settings.php:464 admin/settings.php:479 admin/settings.php:494
+#: admin/settings.php:509 admin/settings.php:524 admin/settings.php:567
+#: admin/settings.php:582 admin/settings.php:597 admin/settings.php:612
+msgid "Upload or select image from gallery"
+msgstr "上传或者从相册中选择图片"
+
+#: admin/settings.php:465 admin/settings.php:480 admin/settings.php:495
+#: admin/settings.php:510 admin/settings.php:525 admin/settings.php:568
+#: admin/settings.php:583 admin/settings.php:613
+msgid "Title"
+msgstr "标题"
+
+#: admin/settings.php:467 admin/settings.php:482 admin/settings.php:497
+#: admin/settings.php:512 admin/settings.php:527 admin/settings.php:570
+#: admin/settings.php:585 admin/settings.php:600 admin/settings.php:615
+msgid "Text"
+msgstr "文本"
+
+#: admin/settings.php:475
+msgid "Slide 2"
+msgstr "幻灯片 2"
+
+#: admin/settings.php:490
+msgid "Slide 3"
+msgstr "幻灯片 3"
+
+#: admin/settings.php:505
+msgid "Slide 4"
+msgstr "幻灯片 4"
+
+#: admin/settings.php:520
+msgid "Slide 5"
+msgstr "幻灯片 5"
+
+#: admin/settings.php:533
+msgid ""
+"Your slides' content. Only the image is required, all other fields are "
+"optional. Only the slides with an image selected will become acitve and "
+"visible in the live slider."
+msgstr ""
+"幻灯片内容。只有图片是必须的，其他都是可选的。只有选择了图片的幻灯片才会被激"
+"活和显示在当前的演示中。"
+
+#: admin/settings.php:543
+msgid "Number of columns:"
+msgstr "栏目数量："
+
+#: admin/settings.php:553
+msgid "Image Height:"
+msgstr "图片高度："
+
+#: admin/settings.php:556
+msgid "Read more text:"
+msgstr "“Read more”按钮上显示文本："
+
+#: admin/settings.php:559
+msgid ""
+"The linked text that appears at the bottom of all the columns. You can "
+"delete all text inside if you don't want it."
+msgstr "出现在所有栏目底部的链接文本。如果你不喜欢，你可以删掉其中的所有文本。"
+
+#: admin/settings.php:563
+msgid "1st Column"
+msgstr "第一栏"
+
+#: admin/settings.php:578
+msgid "2nd Column"
+msgstr "第二栏"
+
+#: admin/settings.php:593
+msgid "3rd Column"
+msgstr "第三栏"
+
+#: admin/settings.php:608
+msgid "4th Column"
+msgstr "第四栏"
+
+#: admin/settings.php:630
+msgid "Extra Text"
+msgstr "附加文本"
+
+#: admin/settings.php:630
+msgid "Top Title"
+msgstr "顶部标题"
+
+#: admin/settings.php:632
+msgid "Second Title"
+msgstr "第二标题"
+
+#: admin/settings.php:635
+msgid "Title color"
+msgstr "标题颜色"
+
+#: admin/settings.php:638
+msgid "The titles' color (Default value is 333333)."
+msgstr "标题的颜色（默认值为333333）"
+
+#: admin/settings.php:640
+msgid "Bottom Text 1"
+msgstr "底部文本1"
+
+#: admin/settings.php:642
+msgid "Bottom Text 2"
+msgstr "底部文本2"
+
+#: admin/settings.php:645
+msgid ""
+"More text for your front page. The top title is above the slider, the second "
+"title between the slider and the columns and 2 more rows of text under the "
+"columns.\n"
+"\t\t It's all optional so leave any input field empty if it's not required. "
+msgstr ""
+"首页显示更多文章。第一标题显示在幻灯片上方。第二标题显示显示在幻灯片和其下方"
+"的栏目之间。这些都是可以选择的。如果你不需要，请留空输入框。"
+
+#: admin/settings.php:651
+msgid "Hide areas"
+msgstr "隐藏区域"
+
+#: admin/settings.php:664
+msgid "Hide the header area (image or background color)."
+msgstr "隐藏顶部区域（图片或者背景颜色）。"
+
+#: admin/settings.php:668
+msgid "Hide the main menu (the top navigation tabs)."
+msgstr "隐藏主菜单（顶部导航标签）。"
+
+#: admin/settings.php:672
+msgid "Hide the footer widgets. "
+msgstr "隐藏底部小工具"
+
+#: admin/settings.php:676
+msgid "Hide the footer (copyright area)."
+msgstr "隐藏底部（版权区域）"
+
+#: admin/settings.php:680
+msgid "Hide the white color. Only the background color remains."
+msgstr "隐藏白色。只有背景班色保留。"
+
+#: admin/settings.php:684
+msgid "Choose the areas to hide on the first page."
+msgstr "选择第一页隐藏的区域。"
+
+#: admin/settings.php:703
+msgid ""
+"Select the font size you'll use in your blog. Pages, posts and comments will "
+"be affected. Buttons, Headers and Side menus will remain the same."
+msgstr ""
+"选择博客的文字大小。页面，文章和评论都会受到影响。按钮、顶部和侧边菜单不受影"
+"响。"
+
+#: admin/settings.php:747
+msgid ""
+"Select the font family you'll use in your blog. All content text will be "
+"affected (including menu buttons). "
+msgstr "选择博客的字体类型。所有内容文本都会受到影响（包括了菜单按钮）"
+
+#: admin/settings.php:748 admin/settings.php:797 admin/settings.php:848
+#: admin/settings.php:899
+msgid ""
+"Or insert your Google Font below. Please only isert the <strong>name</"
+"strong> of the font.<br /> Ex: Marko One. Go to <a href='http://www.google."
+"com/webfonts' > google fonts </a> for some font inspiration."
+msgstr ""
+"或者在下方插入你的谷歌字体。只要出入字体的<strong>名称</strong>。 <br /> 例"
+"如： Marko One。 到 <a href='http://www.google.com/webfonts' > google fonts "
+"</a> 寻找使用字体的灵感。"
+
+#: admin/settings.php:795
+msgid ""
+"Select the font family you want for your titles. It will affect post titles "
+"and page titles. Leave 'Default' and the general font you selected will be "
+"used."
+msgstr ""
+"选择标题字体类型。会影响文章标题和页面标题。如果保持“默认”，将会使用你选择的"
+"基本字体。"
+
+#: admin/settings.php:846
+msgid ""
+"Select the font family you want your sidebar(s) to have. Text in sidebars "
+"will be affected, including any widgets. Leave 'Default' and the general "
+"font you selected will be used."
+msgstr ""
+"选择工具栏的字体类型。工具栏的文本将会受到影响，包括所有的小工具。如果保持“默"
+"认”，那么将会使用之前选择的基本字体。"
+
+#: admin/settings.php:897
+msgid ""
+"Select the font family you want your subheaders to have (h2 - h6 tags will "
+"be affected). Leave 'Default' and the general font you selected will be used."
+msgstr ""
+"选择分标题的字体类型。H2-H6标签将会受到影响。如果保持“默认”，那么将会使用之前"
+"选择的基本字体。"
+
+#: admin/settings.php:909 admin/settings.php:924 admin/settings.php:939
+#: admin/settings.php:984 admin/settings.php:999 admin/settings.php:1014
+msgid "Default"
+msgstr "默认"
+
+#: admin/settings.php:917
+msgid ""
+"Post Header Font size. Leave 'Default' for normal settings (size value will "
+"be as set in the CSS)."
+msgstr "文章顶部字体大小。一般情况下保持“默认”（其大小为CSS中的设定值）。"
+
+#: admin/settings.php:932
+msgid ""
+"Sidebar Font size. Leave 'Default' for normal settings (size value will be "
+"as set in the CSS)."
+msgstr "工具栏字体大小。一般情况下保持“默认”（其大小为CSS中的设定值）。"
+
+#: admin/settings.php:939 admin/settings.php:1728
+msgid "Left"
+msgstr "左"
+
+#: admin/settings.php:939 admin/settings.php:1728
+msgid "Right"
+msgstr "右"
+
+#: admin/settings.php:939
+msgid "Justify"
+msgstr "对齐"
+
+#: admin/settings.php:939 admin/settings.php:1728
+msgid "Center"
+msgstr "中间"
+
+#: admin/settings.php:947
+msgid ""
+"This overwrites the text alignment in posts and pages. Leave 'Default' for "
+"normal settings (alignment will remain as declared in posts, comments etc.)."
+msgstr ""
+"这个会敷在文章和页面的对齐方式。一般设置为“默认”（文章。评论保留预设的对其方"
+"式。）"
+
+#: admin/settings.php:961
+msgid "Choose the indent for your paragraphs."
+msgstr "请选择段落的缩进量。"
+
+#: admin/settings.php:977
+msgid "Disable the default header and title indent (left margin)."
+msgstr "禁用默认头部和标题缩进（左边缘）"
+
+#: admin/settings.php:992
+msgid ""
+"Text line height. The height between 2 rows of text. Leave 'Default' for "
+"normal settings (size value will be as set in the CSS)."
+msgstr ""
+"文本行高度。指的是2组文本之间的高度。一般设置为“默认”（值为CSS中的设定值）。"
+
+#: admin/settings.php:1007
+msgid ""
+"The space between <i>words</i>. Leave 'Default' for normal settings (size "
+"value will be as set in the CSS)."
+msgstr "<i>单词</i>之间的间距。一般设置为“默认”（值为CSS中的设定值）。"
+
+#: admin/settings.php:1022
+msgid ""
+"The space between <i>letters</i>. Leave 'Default' for normal settings (size "
+"value will be as set in the CSS)."
+msgstr "<i>字母</i>之间的间距。。一般设置为“默认”（值为CSS中的设定值）。"
+
+#: admin/settings.php:1039
+msgid "Disable the default text shadow on headers and titles."
+msgstr "禁用顶部和标题默认文字阴影效果。"
+
+#: admin/settings.php:1051
+msgid "Background color (Default value is 444444)."
+msgstr "背景颜色(默认值是 444444)。"
+
+#: admin/settings.php:1059
+msgid ""
+"Header background color (Default value is 333333). You can delete all inside "
+"text for no background color."
+msgstr ""
+"顶部背景颜色（默认值为333333）。如果你不想有背景颜色，你可以删掉里面所有文"
+"本。"
+
+#: admin/settings.php:1066
+msgid ""
+"Content background color (Default value is FFFFFF). Works best with really "
+"light colors."
+msgstr "内容背景颜色。（默认值为FFFFFF）。较淡的颜色效果会更好。"
+
+#: admin/settings.php:1073
+msgid ""
+"Main menu background color (Default value is FAFAFA). Should be the same "
+"color as the content bg or something just as light."
+msgstr ""
+"主菜单背景颜色。（默认值为FAFAFA）。最好和内容背景的颜色一样，或者采用比较淡"
+"的颜色。"
+
+#: admin/settings.php:1080 admin/settings.php:1087
+msgid "First sidebar background color (Default value is FFFFFF)."
+msgstr "第一工具栏背景颜色 (默认值为 FFFFFF)。"
+
+#: admin/settings.php:1095
+msgid "Footer widget-area background color. (Default value is 171717)."
+msgstr "底部小工具区域背景颜色。（默认值为171717）。"
+
+#: admin/settings.php:1103
+msgid "Footer background color (Default value is 222222)."
+msgstr "底部背景颜色 (默认值为 222222)."
+
+#: admin/settings.php:1111
+msgid "Your blog's title color (Default value is 0D85CC)."
+msgstr "博客标题颜色（默认值为0D85CC）"
+
+#: admin/settings.php:1119
+msgid "Your blog's description color(Default value is 222222)."
+msgstr "博客的描述的颜色（默认值为222222）。"
+
+#: admin/settings.php:1127
+msgid "Content Text Color (Default value is 333333)."
+msgstr "内容文字颜色（默认值为333333）。"
+
+#: admin/settings.php:1135
+msgid "Links color (Default value is 0D85CC)."
+msgstr "链接颜色（默认值为0D85CC）。"
+
+#: admin/settings.php:1143
+msgid "Links color on mouse over (Default value is 333333)."
+msgstr "悬停时链接颜色（默认值为333333）。"
+
+#: admin/settings.php:1151
+msgid "Post Header Text Color (Default value is 333333)."
+msgstr "文章顶部文本颜色（默认值为333333）。"
+
+#: admin/settings.php:1159
+msgid "Post Header Text Color on Mouse over (Default value is 000000)."
+msgstr "悬停时文章顶部文本颜色（默认值为000000）。"
+
+#: admin/settings.php:1167
+msgid "Sidebar Header Background color (Default value is 444444)."
+msgstr "工具栏头部背景颜色（默认值为444444）。"
+
+#: admin/settings.php:1176
+msgid "Sidebar Header Text Color(Default value is 2EA5FD)."
+msgstr "工具栏头部文本颜色（默认值为2EA5FD）。"
+
+#: admin/settings.php:1184
+msgid "Footer Widget Text Color (Default value is 0D85CC)."
+msgstr "底部小工具文本颜色（默认值为0D85CC）。"
+
+#: admin/settings.php:1192
+msgid "Footer Widget Link Color (Default value is 666666)."
+msgstr "底部小工具链接颜色（默认值为 666666）。"
+
+#: admin/settings.php:1200
+msgid "Footer Widget Link Color on Mouse Over (Default value is 888888)."
+msgstr "悬停时底部小工具链接颜色（默认值为888888）。"
+
+#: admin/settings.php:1212 admin/settings.php:1273
+msgid "White"
+msgstr "白"
+
+#: admin/settings.php:1212
+msgid "Light"
+msgstr "淡"
+
+#: admin/settings.php:1212
+msgid "Light Gray"
+msgstr "浅灰"
+
+#: admin/settings.php:1212 admin/settings.php:1273
+msgid "Gray"
+msgstr "灰色"
+
+#: admin/settings.php:1212
+msgid "Dark Gray"
+msgstr "深灰色"
+
+#: admin/settings.php:1212
+msgid "Black"
+msgstr "黑色"
+
+#: admin/settings.php:1220
+msgid ""
+"This setting changes the look of your captions. Images that are not inserted "
+"through captions will not be affected."
+msgstr "该设置会改变(图片的)说明文字的外观。没有插入说明的图片将不受影响。"
+
+#: admin/settings.php:1236
+msgid "The border around your inserted images. "
+msgstr "插入的图片的边框。"
+
+#: admin/settings.php:1251
+msgid "The image on top of your captions. "
+msgstr "图片在说明文字的上方。"
+
+#: admin/settings.php:1266
+msgid "The sidebar list bullets. "
+msgstr "工具栏列表箭头。"
+
+#: admin/settings.php:1281
+msgid ""
+"The background for your post-metas area (under your post tiltes). Gray by "
+"default.<"
+msgstr "文章meta信息区域（文章标题下方）的背景。默认颜色为灰色。<"
+
+#: admin/settings.php:1289 admin/settings.php:1305 admin/settings.php:1322
+#: admin/settings.php:1337 admin/settings.php:1352 admin/settings.php:1382
+#: admin/settings.php:1397 admin/settings.php:1413 admin/settings.php:1456
+#: admin/settings.php:1471 admin/settings.php:1486 admin/settings.php:1501
+#: admin/settings.php:1516 admin/settings.php:1531 admin/settings.php:1546
+#: admin/settings.php:1561
+msgid "Show"
+msgstr "显示"
+
+#: admin/settings.php:1289 admin/settings.php:1305 admin/settings.php:1322
+#: admin/settings.php:1337 admin/settings.php:1352 admin/settings.php:1382
+#: admin/settings.php:1413 admin/settings.php:1456 admin/settings.php:1471
+#: admin/settings.php:1486 admin/settings.php:1501 admin/settings.php:1516
+#: admin/settings.php:1531 admin/settings.php:1546 admin/settings.php:1561
+msgid "Hide"
+msgstr "隐藏"
+
+#: admin/settings.php:1297
+msgid "Hide or show a horizontal rule to separate posts."
+msgstr "隐藏或显示用以分开文章的水平线。"
+
+#: admin/settings.php:1313
+msgid ""
+"Hide or show  bullets next to lists that are in your content area (posts, "
+"pages etc.)."
+msgstr "隐藏或者显示内容区域中（文章、页面等）列表旁边的箭头。"
+
+#: admin/settings.php:1330
+msgid ""
+"Hide or show your blog's Title and Description in the header (recommended if "
+"you have a custom header image with text)."
+msgstr ""
+"显示或者隐藏博客顶部的标题和描述（如果你有带有文字的自定义图片，建议隐藏）。"
+
+#: admin/settings.php:1345
+msgid "Hide or show Page titles on any <i>created</i> pages. "
+msgstr "显示或者隐藏任何<i>新建</i> 页面的标题。 "
+
+#: admin/settings.php:1360
+msgid "Hide or show Page titles on <i>Category</i> Pages. "
+msgstr "在 <i>分类</i> 页面中显示或者隐藏文章标题。 "
+
+#: admin/settings.php:1375
+msgid "Hide table borders and background color."
+msgstr "隐藏表格边框和背景颜色。"
+
+#: admin/settings.php:1390
+msgid ""
+"Hide the explanatory text under the comments form. (starts with  <i>You may "
+"use these HTML tags and attributes:...</i>)."
+msgstr ""
+"隐藏评论框下方的说明文本。（以<i>你可以使用这些HTML标签和属性:...</i>作为开"
+"始）"
+
+#: admin/settings.php:1397
+msgid "Hide in posts"
+msgstr "在文章隐藏"
+
+#: admin/settings.php:1397
+msgid "Hide in pages"
+msgstr "在页面隐藏"
+
+#: admin/settings.php:1397
+msgid "Hide everywhere"
+msgstr "所有区域隐藏"
+
+#: admin/settings.php:1405
+msgid ""
+"Hide the  <b>Comments are closed</b> text that by default shows up on pages "
+"or posts with the comments disabled."
+msgstr "默认隐藏当禁止评论时显示在页面或者文章的<b>评论被关闭</b> 文本。"
+
+#: admin/settings.php:1421
+msgid ""
+"Hide the <b>Comments off</b> text next to posts that have comments disabled."
+msgstr "隐藏当我们禁用评论时文章旁边的<b>评论关闭</b>文本。"
+
+#: admin/settings.php:1437
+msgid ""
+"Enable the Back to Top button. The button appears after scrolling the page "
+"down."
+msgstr "允许回到顶部按钮。按钮会在页面下拉后出现。"
+
+#: admin/settings.php:1444
+msgid ""
+"Insert custom text or HTML code that will appear last in you footer. <br /> "
+"You can use HTML to insert links, images and special characters like &copy ."
+msgstr ""
+"插入底部自定义文本或者HTML代码。<br />你可以用HTML插入链接、图片和特殊字符，"
+"如： &copy 。"
+
+#: admin/settings.php:1464
+msgid ""
+"Hide or show the <strong>Leave a comment</strong> or <strong>x Comments</"
+"strong> next to posts or post excerpts."
+msgstr ""
+"隐藏或者显示文章或者文章摘要旁的<strong>发表评论</strong>或者<strong>x 条评论"
+"</strong> 。"
+
+#: admin/settings.php:1479
+msgid "Hide or show the post date."
+msgstr "隐藏或者显示文章的发表时间。"
+
+#: admin/settings.php:1494
+msgid ""
+"Show the post time with the date. Time will not be visible if the Post Date "
+"is hidden."
+msgstr "饮食文章发表时间。如果“文章发表时间”选择了隐藏，那么时间将不被显示。"
+
+#: admin/settings.php:1509
+msgid "Hide or show the post author."
+msgstr "隐藏或者显示文章作者。"
+
+#: admin/settings.php:1524
+msgid "Hide the post category."
+msgstr "隐藏文章分类。"
+
+#: admin/settings.php:1539
+msgid "Hide the post tags."
+msgstr "隐藏文章标签"
+
+#: admin/settings.php:1554
+msgid "Hide the 'Bookmark permalink'."
+msgstr "隐藏“书签链接”"
+
+#: admin/settings.php:1569
+msgid "Hide all the post metas. All meta info and meta areas will be hidden."
+msgstr "隐藏所有文章meta。所有meta信息和meta区域将会被隐藏。"
+
+#: admin/settings.php:1582 admin/settings.php:1597 admin/settings.php:1613
+msgid "Excerpt"
+msgstr "摘要"
+
+#: admin/settings.php:1582 admin/settings.php:1597 admin/settings.php:1613
+msgid "Full Post"
+msgstr "全文"
+
+#: admin/settings.php:1590
+msgid ""
+"Excerpts on the main page. Only standard posts will be affected. All other "
+"post formats (aside, image, chat, quote etc.) have their specific formating."
+msgstr ""
+"主页摘要。只有标准文章会受到影响。所有其他文章格式（aside，图片，聊天，引用"
+"等）有其特定格式。"
+
+#: admin/settings.php:1605
+msgid ""
+"Choose if you want the sticky posts on your home page to be visible in full "
+"or just the excerpts. "
+msgstr "如果你想在主页以全文或者摘要的形式显示置顶文章，那么请选择。"
+
+#: admin/settings.php:1621
+msgid ""
+"Excerpts on archive, categroy and search pages. Same as above, only standard "
+"posts will be affected."
+msgstr "归档、分类和搜索页面的摘要。同上，只有标准文章会受到影响。"
+
+#: admin/settings.php:1629
+msgid ""
+"The number of words an excerpt will have. When that number is reached the "
+"post will be interrupted by a <i>Continue reading</i> link that\n"
+"\t\t\t\t\t\t\twill take the reader to the full post page."
+msgstr ""
+"摘要的长度。当达到指定长度后，文章会被 <i>阅读全文</i> 链接剪断。\n"
+"\t\t\t\t\t\t\t 点击“阅读全文”后，浏览整篇文章。"
+
+#: admin/settings.php:1645
+msgid ""
+"Enable the Magazine Layout. This layout applies to pages with posts and "
+"shows 2 posts per row."
+msgstr "允许杂志布局。应该该布局的页面每行显示2篇文章"
+
+#: admin/settings.php:1652
+msgid ""
+"Replaces the three dots ('[...])' that are appended automatically to "
+"excerpts."
+msgstr "替换摘要自动生成的省略号 ('[...])' "
+
+#: admin/settings.php:1659
+msgid "Edit the 'Continue Reading' link added to your post excerpts."
+msgstr "编辑文章摘要上的‘阅读全文’链接"
+
+#: admin/settings.php:1674
+msgid "By default WordPress excerpts remove all HTML tags ("
+msgstr "默认情况下，wordpress摘要会移除所有HTML标签。（"
+
+#: admin/settings.php:1705
+msgid ""
+"Show featured images as thumbnails on posts. The images must be selected for "
+"each post in the Featured Image section."
+msgstr ""
+"采用特色图片作为文章的缩略图。该图片必须属于每一篇文章的“特色图片”部分。"
+
+#: admin/settings.php:1720
+msgid ""
+"Show the first image that you inserted in a post as a thumbnail. If you "
+"enable this option, the first image in your post will be used even if you "
+"selected a Featured Image in you post."
+msgstr ""
+"将文章中插入的第一张图片作为缩略图显示。如果你允许这个选项，文章中的第一张图"
+"片将作为缩略图，尽管你文章中存在特色图片。"
+
+#: admin/settings.php:1736
+msgid "Thumbnail alignment."
+msgstr "缩略图对齐方式。"
+
+#: admin/settings.php:1753
+msgid ""
+"The size you want the thumbnails to have (in pixels). By default imges will "
+"be scaled with aspect ratio kept. Choose to crop the images if you want the "
+"exact size."
+msgstr ""
+"缩略图的尺寸（像素）。默认情况下，会保持图片的尺寸比例。如果你想要精确的尺"
+"寸，请选择裁切图片。"
+
+#: admin/settings.php:1769
+msgid ""
+"Show featured images on headers. The header will be replaced with a featured "
+"image if you selected it as a Featured Image in the post and\n"
+"\t\t\t\t\t\t\tand if it is bigger or at least equal to the current header "
+"size."
+msgstr ""
+"在顶部显示特色图片。顶部会被你选择的特色图片所取代。\n"
+"\t\t\t\t\t\t\t 图片的尺寸不能小于现在顶部尺寸。"
+
+#: admin/settings.php:1790
+msgid ""
+"Select your desired Social network from the left dropdown menu and insert "
+"your corresponding address in the right input field. (ex: <i>http://www."
+"facebook.com/yourname</i> )"
+msgstr ""
+"在下拉菜单中选择社交媒体，并在输入框内填入你的地址。（例如： <i>http://www."
+"facebook.com/yourname</i> ）"
+
+#: admin/settings.php:1804
+msgid "You can insert up to 5 different social sites and addresses."
+msgstr "你能够插入5种不同的社交媒体网站和地址。"
+
+#: admin/settings.php:1818
+msgid "There are a total of 27 social networks to choose from. "
+msgstr "在选择框中，一共有27种社交网站可以选择。"
+
+#: admin/settings.php:1832
+msgid "You can leave any number of inputs empty. "
+msgstr "你可以留下任意数量不输入。"
+
+#: admin/settings.php:1846
+msgid "You can choose the same social media any number of times.  "
+msgstr "你能够选择相同的社交媒体任意次数。"
+
+#: admin/settings.php:1877
+msgid "Choose the <b>areas</b> where to display the social icons."
+msgstr "选择你想显示社交媒体icon的<b>区域</b>。"
+
+#: admin/settings.php:1898
+msgid ""
+"Make the site header into a clickable link that links to your index page."
+msgstr "让网站的顶部成为一个链接到网站首页的可点击链接。"
+
+#: admin/settings.php:1913
+msgid ""
+"Show breadcrumbs at the top of the content area. Breadcrumbs are a form of "
+"navigation that keeps track of your location withtin the site."
+msgstr "在内容的顶部显示面包屑导航。面包屑导航能够跟踪并显示你在站内的位置。"
+
+#: admin/settings.php:1928
+msgid ""
+"Show numbered pagination. Where there is more than one page, instead of the "
+"bottom <b>Older Posts</b> and <b>Newer posts</b> links you have a numbered "
+"pagination. "
+msgstr ""
+"显示页码编号。当文章多于一页时，用页码取代 <b>较旧文章</b>和<b>较新文章</b>按"
+"钮。 "
+
+#: admin/settings.php:1943
+msgid ""
+"Enable the mobile view and make Mantra responsive. The layout and look of "
+"your blog will change depending on what device and what resolution it is "
+"viewed in. "
+msgstr ""
+"允许移动设备视图和使Mantra自适应。使用这种布局和外观的博客会根据设备及解决方"
+"案做出改变。"
+
+#: admin/settings.php:1953
+msgid "Upload or select favicon from gallery"
+msgstr "上传或者在相册中选择favicon。"
+
+#: admin/settings.php:1957
+msgid ""
+"Limitations: It has to be an image. It should be max 64x64 pixels in "
+"dimensions. Recommended file extensions .ico and .png . "
+msgstr ""
+"限制：这必须是图片。最大尺寸为 64x64px。建议文件的扩展名为.ico或者为.png。"
+
+#: admin/settings.php:1965
+msgid ""
+"Insert your custom CSS here. Any CSS declarations made here will overwrite "
+"Mantra's (even the custom options specified right here in the Mantra "
+"Settings page). <br /> Your custom CSS will be preserved when updating the "
+"theme."
+msgstr ""
+"插入自定义CSS。这里的CSS或覆盖Mantra主题的CSS。（甚至是Mantra设置页面中特定的"
+"的自定义选项）<br /> 主题升级时，会保留自定义CSS。"
+
+#: admin/settings.php:1972
+msgid ""
+"Insert your custom Javascript code here. (Google Analytics and any other "
+"forms of Analytic software)."
+msgstr "插入自定义Javascript。（谷歌统计分析或者其他统计分析代码）"
+
+#: admin/settings.php:1985
+msgid ""
+"Enable Mantra's Search Engine Optimization. This is enabled by default and "
+"should only be disabled if you are using a SEO plugin."
+msgstr "允许Mantra的SEO。默认为允许。只有在你采用了seo插件时才应该禁用。"
+
+#: admin/settings.php:1997
+msgid "Auto"
+msgstr "自动"
+
+#: admin/settings.php:1997
+msgid "Manual"
+msgstr "手动"
+
+#: includes/theme-comments.php:28
+msgid "says:"
+msgstr "说："
+
+#: includes/theme-comments.php:34
+msgid "Your comment is awaiting moderation."
+msgstr "您的评论正在等待审核。"
+
+#: includes/theme-comments.php:41
+msgid "at"
+msgstr "于"
+
+#: includes/theme-comments.php:41 includes/theme-comments.php:58
+msgid "(Edit)"
+msgstr "(编辑)"
+
+#: includes/theme-comments.php:58
+msgid "Pingback: "
+msgstr "引用通告："
+
+#: includes/theme-comments.php:85
+msgid "Leave a comment"
+msgstr "发表评论"
+
+#: includes/theme-comments.php:85
+msgid "<b>1</b> Comment"
+msgstr "<b>1</b> 条评论"
+
+#: includes/theme-comments.php:85
+msgid "<b>%</b> Comments"
+msgstr "<b>%</b> 条评论"
+
+#: includes/theme-comments.php:94
+#, php-format
+msgid "One Response to %2$s"
+msgid_plural "%1$s Responses to %2$s"
+msgstr[0] "%2$s 有一条回复"
+msgstr[1] "%2$s 有 %1$s 条回复"
+
+#: includes/theme-comments.php:107
+msgid "Older Comments"
+msgstr "较旧的评论"
+
+#: includes/theme-comments.php:108
+msgid "Newer Comments"
+msgstr "较新的评论"
+
+#: includes/theme-functions.php:233
+msgid "Home Page"
+msgstr "首页"
+
+#: includes/theme-functions.php:297
+msgid "Powered by"
+msgstr "Powered by"
+
+#: includes/theme-functions.php:299
+msgid "Semantic Personal Publishing Platform"
+msgstr "个人信息发布平台"
+
+#: includes/theme-loop.php:145
+msgid "By "
+msgstr "由:"
+
+#: includes/theme-loop.php:185
+msgid " Bookmark the "
+msgstr "添加书签:"
+
+#: includes/theme-loop.php:185 includes/theme-loop.php:187
+#: includes/theme-loop.php:189
+msgid "Permalink to"
+msgstr "永久链接"
+
+#: includes/theme-loop.php:185 includes/theme-loop.php:187
+#: includes/theme-loop.php:189
+msgid "permalink"
+msgstr "永久链接:"
+
+#: includes/theme-loop.php:187 includes/theme-loop.php:189
+msgid "Bookmark the "
+msgstr "添加书签:"
+
+#: includes/theme-loop.php:211
+msgid "<span class=\"meta-nav\">&laquo;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&laquo;</span> 较旧文章"
+
+#: includes/theme-loop.php:212
+msgid "Newer posts <span class=\"meta-nav\">&raquo;</span>"
+msgstr "较新文章 <span class=\"meta-nav\">&raquo;</span>"
+
+#: includes/theme-seo.php:26
+#, php-format
+msgid "Page %s"
+msgstr "第 %s 页"
+
+#: includes/theme-setup.php:90
+msgid "Primary Navigation"
+msgstr "主导航"
+
+#: includes/theme-setup.php:91
+msgid "Top Navigation"
+msgstr "顶部导航"
+
+#: includes/theme-setup.php:92
+msgid "Footer Navigation"
+msgstr "底部导航"
+
+#: includes/theme-setup.php:139
+msgid "mantra"
+msgstr "mantra"
+
+#: includes/theme-setup.php:200
+msgid "Skip to content"
+msgstr "跳转至内容"
+
+#: includes/theme-setup.php:227
+msgid "Primary Widget Area - Sidebar 1"
+msgstr "主小工具栏区域 - 工具栏 1"
+
+#: includes/theme-setup.php:229
+msgid "Primary widget area - Sidebar 1"
+msgstr "主小工具栏区域 - 工具栏 1"
+
+#: includes/theme-setup.php:238
+msgid "Secondary Widget Area - Sidebar 1"
+msgstr "第二小工具栏区域 - 工具栏 1"
+
+#: includes/theme-setup.php:240
+msgid "Secondary widget area - Sidebar 1"
+msgstr "第二小工具栏区域 - 工具栏 1"
+
+#: includes/theme-setup.php:249
+msgid "Third Widget Area - Sidebar 2"
+msgstr "第三小工具栏区域 - 工具栏 2"
+
+#: includes/theme-setup.php:251
+msgid "Third widget area - Sidebar 2"
+msgstr "第三小工具栏区域 - 工具栏 2"
+
+#: includes/theme-setup.php:260
+msgid "Fourth Widget Area - Sidebar 2"
+msgstr "第四小工具栏区域 - 工具栏 1"
+
+#: includes/theme-setup.php:262
+msgid "Fourth widget area  - Sidebar 2"
+msgstr "第四小工具栏区域 - 工具栏 2"
+
+#: includes/theme-setup.php:271
+msgid "First Footer Widget Area"
+msgstr "第一底部工具栏区域"
+
+#: includes/theme-setup.php:273
+msgid "First footer widget area"
+msgstr "第一底部工具栏区域"
+
+#: includes/theme-setup.php:282
+msgid "Second Footer Widget Area"
+msgstr "第二底部工具栏区域"
+
+#: includes/theme-setup.php:284
+msgid "Second footer widget area"
+msgstr "第二底部工具栏区域"
+
+#: includes/theme-setup.php:293
+msgid "Third Footer Widget Area"
+msgstr "第三底部工具栏区域"
+
+#: includes/theme-setup.php:295
+msgid "The third footer widget area"
+msgstr "第三底部工具栏区域"
+
+#: includes/theme-setup.php:304
+msgid "Fourth Footer Widget Area"
+msgstr "第四底部工具栏区域"
+
+#: includes/theme-setup.php:306
+msgid "The fourth footer widget area"
+msgstr "第四底部工具栏区域"
+
+#~ msgid "Featured"
+#~ msgstr "推荐"
+
+#~ msgid "Archives"
+#~ msgstr "归档"
+
+#~ msgid "Meta"
+#~ msgstr "元"
+
+#~ msgid "Previous post link"
+#~ msgstr "上一篇文章"
+
+#~ msgid "Next post link"
+#~ msgstr "下一篇文章"
+
+#~ msgid "Insert footer copyright"
+#~ msgstr "出入底部版权"
+
+#~ msgid ""
+#~ "Enable the presentation front-page. This will become your new home page "
+#~ "and it will replace whatever page you have selected as homepage. It has a "
+#~ "slider and columns for presentation\n"
+#~ "\t\ttext and images."
+#~ msgstr ""
+#~ "Enable the presentation front-page。这会成为你的新主页，并且会取代你所选择"
+#~ "的任意主页。该页面包括了幻灯片和若干栏目，一方面介绍。\n"
+#~ "\t\ttext and images."
