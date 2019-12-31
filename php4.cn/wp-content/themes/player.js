@@ -22,10 +22,15 @@ function script_fluidplayer() {
     <script src="https://wo99.oss-cn-qingdao.aliyuncs.com/scripts/fluidplayer/fluidplayer.min.js"></script>
     `);
 }
+function script_iframe() {
+    if (isIncScript) return;
+    isIncScript = true;
+    // 没有脚本嵌入
+}
 
 function html_videojs(id, suffix, params) {
     let video = params.video;
-    if(suffix) video += '.m3u8';
+    if (suffix) video += '.m3u8';
     document.writeln(`
 	<figure class="wp-block-video">
         <div class="site-player" style="width:${videoWidth};height:${videoHeight}">
@@ -94,6 +99,18 @@ function html_fluidplayer(id, params) {
     );
 }
 
+function html_iframe(id, params) {
+    console.log('???',id, params);
+    document.writeln(
+        `<figure class="wp-block-video">
+        <div class="site-player">
+            <iframe width="100%" height="100%" src="${params.video}" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <figcaption>${params.title}</figcaption>
+        </figure>`
+    );
+}
+
 function randomNum() {
     return String(Math.random()).split('.').join('');
 }
@@ -115,6 +132,10 @@ function dv(params) {
         case '992tv':
             script_videojs();
             html_videojs('videoId' + randomNum(), true, params);
+            break;
+        case 'syw04':
+            script_iframe();
+            html_iframe('videoId' + randomNum(), params);
             break;
         default:
             script_videojs();
