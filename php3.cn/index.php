@@ -1,12 +1,19 @@
 <?php
-// 测试 flutter 加载json数据
+include('./class/PHPMysql.class.php');
+include('./class/PHPnew.class.php');
+include('./class/Config.class.php');
 
-$name = isset($_GET['name']) ? $_GET['name'] : 'xxx';
-$email = isset($_GET['email']) ? $_GET['email'] : 'xxx@xxx.com';
+$Config = new Config();
+$mysql = new PHPMysql($Config::$DB);
+$category = $mysql->field(array('*'))->limit(100)->select('category');
+for ($i = 0; $i < count($category); $i++) {
+	$d = $mysql->where(array('category' => $category[$i]['id']))->order(array('sort' => 'desc'))->select('links');
+	$category[$i]['data'] = $d;
+}
 
-$data = array(
-    'name' => $name,
-    'email' => $email
-);
-
-echo (json_encode($data));
+// 模板引擎实例
+$PHPnew = new PHPnew();
+$PHPnew->templates_dir = './template/default/';
+$PHPnew->templates_var = 'ASSIGN';
+$PHPnew->assign('category', $category);
+$PHPnew->display('index');
