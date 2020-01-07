@@ -1,4 +1,6 @@
 other
+cache
+cache_tpl
 node_modules/
 
 *.psd
