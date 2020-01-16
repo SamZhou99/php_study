@@ -6,8 +6,15 @@
 	<meta charset="utf-8">
 	<title>辣椒-网址导航</title>
 	<link rel="stylesheet" rev="stylesheet" href="/template/default/1234.css" type="text/css">
-	<link rel="shortcut icon" href="http://www.itouxiao.net/favicon.ico" />
-	<link rel="bookmark" href="http://www.itouxiao.net/favicon.ico" />
+	<!-- <link href="https://wo99.oss-cn-qingdao.aliyuncs.com/styles/bootstrap/4.1.0/css/bootstrap.min.css" type="text/css">
+	<script src="https://wo99.oss-cn-qingdao.aliyuncs.com/styles/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<script src="https://wo99.oss-cn-qingdao.aliyuncs.com/scripts/jquery/3.2.1/jquery.min.js"></script> -->
+	<!-- demo -->
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
 	<style>
 		* {
 			scrollbar-base-color: #F8F8F8;
@@ -39,47 +46,27 @@
 			color: red;
 		}
 	</style>
-	<script src="https://wo99.oss-cn-qingdao.aliyuncs.com/scripts/jquery/3.2.1/jquery.min.js"></script>
-	<script>
-		$(function () {
-			let linkArrIndex = 0;
-			let linkArr = [];
-			function test_link() {
-				if (linkArrIndex > 5) return;
-				let linkObj = linkArr[linkArrIndex];
-				$('#myIframe').attr('src', linkObj.href);
-				linkArrIndex++;
-			}
-			$('#test_btn').on('click', () => {
-				$('#myIframe').on('load', () => {
-					console.log('框架加载成功');
-					test_link();
-				});
-				$('#myIframe').on('error', () => {
-					console.log('框架加载失败');
-					test_link();
-				});
-
-				$('li a').each((index, item) => {
-					let o = {
-						text: $(item).eq(0).text(),
-						href: $(item).eq(0).attr('href')
-					};
-					linkArr[index] = o;
-				});
-
-				test_link();
-			});
-		});
-	</script>
 </head>
 
 <body>
+	<div class="container">
+		<?php foreach ($category as $categoryItem) : ?>
+		<div class="row">
+			<div>{$categoryItem['name']}</div>
+			<?php foreach ($categoryItem['data'] as $linkItem) : $url = $linkItem['url']; $name = $linkItem['name'];?>
+			<div class="col-2">
+				<a href="{$url}" target="_blank">{$name}</a>
+			</div>
+			<?php endforeach; ?>
+		</div>
+		<?php endforeach; ?>
+	</div>
 
-	<iframe id="myIframe" src="#"></iframe>
+
+	<hr>
+
 
 	<div class="category">
-		<input id="test_btn" type="button" value="AUTO TEST LINK URL" />
 		<div class="categoryone"></div>
 		<div class="categorytwo"></div>
 		<div class="categorythr">
@@ -88,7 +75,7 @@
 				<h3 class="title">{$categoryItem['name']}</h3>
 				<ul>
 					<?php foreach ($categoryItem['data'] as $linkItem) : $url = $linkItem['url']; $name = $linkItem['name'];?>
-					<li><a href="{$url}" target="_blank">{$name}</a><span class="link-status">?</span></li>
+					<li><a href="{$url}" target="_blank">{$name}</a></li>
 					<?php endforeach; ?>
 				</ul>
 			</div>
@@ -96,14 +83,17 @@
 		</div>
 
 		<div class="categoryfor">Copyright &#169; <a href="#">辣椒网址导航</a>
-			<span id="poweredakcms">Powered by <a href="#" target="_blank">AKCMS</a></span>
+			<span id="poweredakcms">Powered by <a href="#" target="_blank">NAVCMS</a></span>
 			<br>
-			<a href="http://1234.demo.akhtm.com/#">备案号</a>
+			<a href="#">备案号</a>
 			<br>
 		</div>
 		<div style="clear:both;"></div>
-
 	</div>
+
+
+
+
 
 </body>
 
