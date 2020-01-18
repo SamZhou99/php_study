@@ -15,5 +15,6 @@ for ($i = 0; $i < count($category); $i++) {
 $PHPnew = new PHPnew();
 $PHPnew->templates_dir = './template/default/';
 $PHPnew->templates_var = 'ASSIGN';
+$PHPnew->assign('title', $Config::$TITLE);
 $PHPnew->assign('category', $category);
 $PHPnew->display('index');
