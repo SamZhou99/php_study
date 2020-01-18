@@ -2,7 +2,12 @@
 
 class Config
 {
-    static $TITLE = '辣椒-网址导航';
+    static $SITE_INFO = array(
+        'title' => '辣椒-网址导航',
+        'keywords' => 'keywords',
+        'description' => 'description',
+        'color' => 'cadetblue'
+    );
 
     static $DB = array(
         'host' => '127.0.0.1',
