@@ -19,7 +19,7 @@ div {
 
 #nav-plane {
     position: fixed;
-    top: 106px;
+    top: 97px;
     right: 50%;
     margin-right: 585px;
     background-color: #FFFFFF;
@@ -31,8 +31,9 @@ div {
 }
 #nav-plane ul li {
     list-style: none;
-    margin: 1px;
+    margin: 0px;
     padding: 3px;
+    border-top: #FFF;
 }
 
 .navTop{

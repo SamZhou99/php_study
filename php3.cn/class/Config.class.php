@@ -3,10 +3,12 @@
 class Config
 {
     static $SITE_INFO = array(
-        'title' => '辣椒-网址导航',
-        'keywords' => 'keywords',
-        'description' => 'description',
-        'color' => 'cadetblue'
+        'title' => '辣椒导航',
+        'keywords' => '辣椒导航,福利导航,最好的福利导航',
+        'description' => '全面准确，更新及时，纯净无毒。【收录优质站点】',
+        'color' => 'cadetblue',
+        'url' => '/',
+        'email' => 'lajiao.service@gmail.com'
     );
 
     static $DB = array(

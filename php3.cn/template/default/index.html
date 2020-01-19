@@ -28,16 +28,33 @@
 
 <div class="jumbotron text-center" style="margin-bottom:0; padding: 1px;">
 <h1>{$siteInfo['title']}</h1>
-<p>其他说明！</p> 
+<p>{$siteInfo['description']}</p>
 </div>
 
-<a id="TOP"></a>
+<div class="container text-conter">
+	<div class="row">
+		<p>广告,合作,收录 : <a href="mailto:{$siteInfo['email']}">{$siteInfo['email']}</a></p>
+		<a id="TOP"></a>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<center>
+			<a href="http://888.w77777777.com:8188/f083.html" target="_blank">
+				<img src="https://sc02.alicdn.com/kf/U9f5ad094eaa24dcfa0b4bb16e646407ay.gif" width="100%"></a>
+			<a href="http://df.s77777777.com:8118/fab079.html" target="_blank">
+				<img src="https://sc02.alicdn.com/kf/U93f66f6cb5ae41ef97f48b04eea7fb97e.gif" width="100%"></a>
+			<a href="http://ky.g66667777.com:8001/ky025.html" target="_blank">
+				<img src="https://sc02.alicdn.com/kf/Udf7dde2e2a874ca08e8a0b63e47b11146.gif" width="100%"></a>
+		</center>
+	</div>
+</div>
 
 <div id="nav-plane">
 <ul>
-<li class="active" style="background-color: {$siteInfo['color']};"><a href="#top" rel="external nofollow" style="line-height:30px;">TOP</a></li>
+<li class="active" style="background-color: {$siteInfo['color']};"><a href="#top" rel="external nofollow" style="line-height:40px;">TOP</a></li>
 <?php foreach ($category as $categoryItem) : ?>
-<li><a href="#{$categoryItem['name']}" rel="external nofollow"><i class="fa fa-star mr5px" aria-hidden="true"></i>{$categoryItem['name']}</a></li>
+<li><a href="#{$categoryItem['name']}">{$categoryItem['name']}</a></li>
 <?php endforeach; ?>
 </ul>
 </div>
@@ -59,7 +76,8 @@
 </div>
 
 <div class="jumbotron text-center" style="margin-bottom:0">
-<p>Copyright © 2019. All Rights Reserved.</p>
+	<p>Copyright © <a href="{$siteInfo['url']}">{$siteInfo['title']}</a> 2020. All Rights Reserved.</p>
+	<p>广告,合作,收录 : <a href="mailto:{$siteInfo['email']}">{$siteInfo['email']}</a></p>
 </div>
 
 </body>
