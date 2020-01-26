@@ -1,0 +1,27 @@
+
+<form action="./edit.php?{$queryString}" method="POST" target="_blank">
+    <?php
+    if($type === 'category'){
+    ?>
+
+    <p>id:<input id="id" name="id" type="input" value="{$item['id']}" readonly=true></p>
+    <p>name:<input id="name" name="name" type="input" value="{$item['name']}"></p>
+    <p>sort:<input id="sort" name="sort" type="input" value="{$item['sort']}"></p>
+    <?php
+    }elseif($type === 'links'){
+    ?>
+    <p>id:<input id="id" name="id" type="input" value="{$item['id']}" readonly=true></p>
+    <p>name:<input id="name" name="name" type="input" value="{$item['name']}"></p>
+    <p>sort:<input id="sort" name="sort" type="input" value="{$item['sort']}"></p>
+    <p>url:<input id="url" name="url" type="input" value="{$item['url']}"></p>
+    <p>hot:<input id="hot" name="hot" type="input" value="{$item['hot']}"></p>
+    <p>status:<input id="status" name="status" type="input" value="{$item['status']}"></p>
+    <?php
+    }
+    ?>
+    <p>
+        <input id="act" name="act" type="hidden" value="edit">
+        <input id="type" name="type" type="hidden" value="{$type}">
+    </p>
+    <p><button type="submit">提交</button></p>
+</form>

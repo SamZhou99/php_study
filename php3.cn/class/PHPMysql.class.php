@@ -218,7 +218,7 @@ class PHPMysql
         if (!trim($this->_where)) return false;
         $data = $this->_dataFormat($tbName, $data);
         if (!$data) return;
-        $valArr = '';
+        $valArr = array();
         foreach ($data as $k => $v) {
             $valArr[] = $k . '=' . $v;
         }

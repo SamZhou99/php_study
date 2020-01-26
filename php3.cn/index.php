@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 include('./class/PHPMysql.class.php');
 include('./class/PHPnew.class.php');
 include('./class/Config.class.php');
@@ -15,6 +15,7 @@ for ($i = 0; $i < count($category); $i++) {
 $PHPnew = new PHPnew();
 $PHPnew->templates_dir = './template/default/';
 $PHPnew->templates_var = 'ASSIGN';
+$PHPnew->assign('isAdmin', $_SESSION['isAdmin']);
 $PHPnew->assign('siteInfo', $Config::$SITE_INFO);
 $PHPnew->assign('category', $category);
 $PHPnew->display('index');

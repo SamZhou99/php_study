@@ -53,8 +53,14 @@
 <div id="nav-plane">
 <ul>
 <li class="active" style="background-color: {$siteInfo['color']};"><a href="#top" rel="external nofollow" style="line-height:40px;">TOP</a></li>
-<?php foreach ($category as $categoryItem) : ?>
-<li><a href="#{$categoryItem['name']}">{$categoryItem['name']}</a></li>
+<?php foreach ($category as $categoryItem) : 
+if($isAdmin === 9999){
+	$categoryUrl = '/edit.php?type=category&id='.$categoryItem['id'];
+}else{
+	$categoryUrl = '/#'.$categoryItem['name'];
+}
+?>
+<li><a href="{$categoryUrl}">{$categoryItem['name']}</a></li>
 <?php endforeach; ?>
 </ul>
 </div>
@@ -66,9 +72,19 @@
 <div class="col-12"><a id="{$categoryItem['name']}">{$categoryItem['name']}</a></div>
 </div>
 <div class="row">
-<?php foreach ($categoryItem['data'] as $linkItem) : $url = $linkItem['url']; $name = $linkItem['name'];?>
+<?php 
+foreach ($categoryItem['data'] as $linkItem) :
+$id = $linkItem['id'];
+$url = $isAdmin===1 ? '/edit.php?id={$id}&': $linkItem['url'];//
+$name = $linkItem['name'];
+if($isAdmin === 9999){
+	$linkUrl = '/edit.php?type=links&id='.$linkItem['id'];
+}else{
+	$linkUrl = $url;
+}
+?>
 <div class="col-6 col-sm-4 col-lg-2 col-xl-2 linkItem">
-<a href="{$url}" target="_blank">{$name}</a>
+<a href="{$linkUrl}" target="_blank">{$name}</a>
 </div>
 <?php endforeach; ?>
 </div>
