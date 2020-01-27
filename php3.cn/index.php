@@ -5,7 +5,7 @@ include('./class/Config.class.php');
 
 $Config = new Config();
 $mysql = new PHPMysql($Config::$DB);
-$category = $mysql->field(array('*'))->limit(100)->select('category');
+$category = $mysql->field(array('*'))->where(array('status' => 1))->order(array('sort' => 'desc'))->limit(100)->select('category');
 for ($i = 0; $i < count($category); $i++) {
 	$d = $mysql->where(array('category' => $category[$i]['id']))->order(array('sort' => 'desc'))->select('links');
 	$category[$i]['data'] = $d;

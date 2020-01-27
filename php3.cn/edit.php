@@ -6,7 +6,8 @@ include('./class/Config.class.php');
 $Config = new Config();
 $mysql = new PHPMysql($Config::$DB);
 
-function location(){
+function location()
+{
     Header("HTTP/1.1 303 See Other");
     Header("Location: /");
     exit();
@@ -24,12 +25,12 @@ if ($act === 'edit') {
         $id = isset($_POST['id']) ? (int) $_POST['id'] : 0;
         $name = isset($_POST['name']) ? $_POST['name'] : '';
         $sort = isset($_POST['sort']) ? (int) $_POST['sort'] : 0;
-        $s = $mysql->where(array('id' => $id))->update('category', array('sort' => $sort));
+        $s = $mysql->where(array('id' => $id))->update('category', array('name' => $name, 'sort' => $sort));
     }
     if ($_POST['type'] === 'links') {
         //
     }
-    // location();
+    location();
     exit("$id, $name, $sort");
 }
 
