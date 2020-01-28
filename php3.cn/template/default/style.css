@@ -25,10 +25,12 @@ div {
     background-color: #FFFFFF;
     overflow: hidden;
 }
-#nav-plane ul{
+
+#nav-plane ul {
     margin: 0px;
     padding: 0px;
 }
+
 #nav-plane ul li {
     list-style: none;
     margin: 0px;
@@ -36,6 +38,11 @@ div {
     border-top: #FFF;
 }
 
-.navTop{
+.navTop {
     top: 10px;
+}
+
+.hot a:link, .hot a:active, .hot a:visited, .hot a:hover {
+    font-weight: bold;
+    color: red;
 }

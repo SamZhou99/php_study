@@ -37,18 +37,8 @@
 		<a id="TOP"></a>
 	</div>
 </div>
-<div class="container">
-	<div class="row">
-		<div class="text-center">
-			<a href="#" target="_blank">
-				<img src="https://sc02.alicdn.com/kf/U9f5ad094eaa24dcfa0b4bb16e646407ay.gif" width="100%"></a>
-			<a href="#" target="_blank">
-				<img src="https://sc02.alicdn.com/kf/U93f66f6cb5ae41ef97f48b04eea7fb97e.gif" width="100%"></a>
-			<a href="#" target="_blank">
-				<img src="https://sc02.alicdn.com/kf/Udf7dde2e2a874ca08e8a0b63e47b11146.gif" width="100%"></a>
-		</div>
-	</div>
-</div>
+
+{load ad}
 
 <div id="nav-plane">
 <ul>
@@ -75,16 +65,18 @@ if($isAdmin === 9999){
 <?php 
 foreach ($categoryItem['data'] as $linkItem) :
 $id = $linkItem['id'];
-$url = $isAdmin===1 ? '/edit.php?id={$id}&': $linkItem['url'];//
+$url = $isAdmin===1 ? '/edit.php?id={$id}&': $linkItem['url'];
 $name = $linkItem['name'];
+$hot = $linkItem['hot']===1 ? 'hot' : '';
+$hotIcon = $linkItem['hot']===1 ? '<img style="vertical-align:top" src="/template/default/images/hot01.gif">' : '';
 if($isAdmin === 9999){
 	$linkUrl = '/edit.php?type=links&id='.$linkItem['id'];
 }else{
 	$linkUrl = $url;
 }
 ?>
-<div class="col-6 col-sm-4 col-lg-2 col-xl-2 linkItem">
-<a href="{$linkUrl}" target="_blank">{$name}</a>
+<div class="col-6 col-sm-4 col-lg-2 col-xl-2 linkItem {$hot}">
+<a href="{$linkUrl}" target="_blank">{$name}{$hotIcon}</a>
 </div>
 <?php endforeach; ?>
 </div>
