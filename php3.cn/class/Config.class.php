@@ -8,7 +8,8 @@ class Config
         'description' => '全面准确，更新及时，纯净无毒。【收录优质站点】',
         'color' => 'cadetblue',
         'url' => '/',
-        'email' => 'lajiao.service@gmail.com'
+        'email' => 'lajiao.service@gmail.com',
+        'index_page' => 'http://www.91sogo.top/index.php'
     );
 
     static $DB = array(

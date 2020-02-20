@@ -256,10 +256,10 @@ class PHPMysql
                 if (is_array($v)) {
                     $relative = isset($v[1]) ? $v[1] : '=';
                     $logic    = isset($v[2]) ? $v[2] : 'and';
-                    $condition = ' (' . $this->_addChar($k) . ' ' . $relative . ' ' . $v[0] . ') ';
+                    $condition = ' (' . $this->_addChar($k) . ' ' . $relative . ' ' . "'$v[0]'" . ') ';
                 } else {
                     $logic = 'and';
-                    $condition = ' (' . $this->_addChar($k) . '=' . $v . ') ';
+                    $condition = ' (' . $this->_addChar($k) . '=' . "'$v'" . ') ';
                 }
                 $this->_where .= isset($mark) ? $logic . $condition : $condition;
                 $mark = 1;

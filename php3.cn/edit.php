@@ -15,7 +15,8 @@ function location($url = '/')
 
 function writeHtml()
 {
-    $html = file_get_contents('http://php3.cn/index.php');
+    global $Config;
+    $html = file_get_contents($Config::$SITE_INFO['index_page']);
     $fp = fopen('./index.html', 'w');
     fwrite($fp, $html);
     fclose($fp);
