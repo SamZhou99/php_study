@@ -6,15 +6,19 @@ include('./class/Utils.class.php');
 
 // 配置
 $Config = new Config();
-
+// Utils工具
 $Utils = new Utils();
 
-if ($_SESSION['isLogin'] !== $Config::$IsLogin) {
-	$Utils::Location('/login.php');
-}
+$Utils::CheckLogin('/login.php');
 
+// 查询
 $mysql = new PHPMysql($Config::$DB);
-$memberRow = $mysql->field(array('*'))->where(array('id' => $_SESSION['id']))->limit(1)->select('member');
+// 会员查询
+$memberRow = $mysql
+	->field(array('*'))
+	->where(array('id' => $_SESSION['id']))
+	->limit(1)
+	->select('member');
 $member = $memberRow[0];
 
 if ($member['status'] === 0) {
@@ -27,6 +31,12 @@ if ($member['type'] < 9) {
 	$Utils::Location('/login.php?message=' . $message);
 }
 
+// 礼堂查询
+$ancestral = $mysql
+	->field(array('*'))
+	->select('ancestral');
+
+
 // 模板引擎实例
 $PHPnew = new PHPnew();
 $PHPnew->templates_dir = './template/default/';
@@ -34,4 +44,6 @@ $PHPnew->templates_var = 'ASSIGN';
 $PHPnew->assign('siteInfo', $Config::$SITE_INFO);
 $PHPnew->assign('session', $_SESSION);
 $PHPnew->assign('member', $member);
+$PHPnew->assign('ancestral', $ancestral);
+$PHPnew->assign('templateName', 'ancestral');
 $PHPnew->display('index');

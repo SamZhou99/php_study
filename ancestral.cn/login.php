@@ -24,9 +24,7 @@ if ($account && $password) {
 		->field(array('*'))
 		->where($form)
 		->select('member');
-	// for ($i = 0; $i < count($member); $i++) {
-	// 	$member = $member[$i];
-	// }
+		
 	if (count($member) > 0) {
 		$_SESSION['isLogin'] = $Config::$IsLogin;
 		$_SESSION['id'] = $member[0]['id'];

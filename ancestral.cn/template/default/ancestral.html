@@ -1,0 +1,36 @@
+<div class="search-box-top">
+    <form>
+        <div class="input-group">
+            <input name="search" class="form-control input-search" placeholder="Search..." type="text">
+            <span class="input-group-btn">
+                <button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
+            </span> </div>
+    </form>
+</div>
+
+<?php
+for($i=0; $i<count($ancestral); $i++){
+    $item = $ancestral[$i];
+?>
+
+<div class="search-item">
+    <h3><a href="#">{$item['name']}</a></h3>
+    <a class="search-link" href="javascript:void(0);">www.baidu.com</a>
+    <p><?php for($j=0;$j<$item['star'];$j++){echo('⭐');}?></p>
+    <p>{$item['address']}</p>
+</div>
+<?php } ?>
+<!-- /.search item-->
+
+
+<!-- 翻页 -->
+<ul class="pagination m-t-30">
+    <li><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+    <li><a href="#">1</a></li>
+    <li class="active"><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">6</a></li>
+    <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+</ul>
