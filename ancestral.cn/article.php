@@ -1,1 +1,6 @@
-文章管理
+<?php
+
+$title = '文章管理';
+$templateName = 'article';
+
+include('./common.template.php');

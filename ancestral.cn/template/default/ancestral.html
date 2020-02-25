@@ -1,36 +1,106 @@
-<div class="search-box-top">
-    <form>
-        <div class="input-group">
-            <input name="search" class="form-control input-search" placeholder="Search..." type="text">
-            <span class="input-group-btn">
-                <button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
-            </span> </div>
-    </form>
+<div id="app">
+
+    <!-- <div class="search-box-top">
+        <form>
+            <div class="input-group">
+                <input name="search" class="form-control input-search" placeholder="Search..." type="text">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
+                </span> </div>
+        </form>
+        <div class="progress m-b-5">
+            <div class="progress-bar progress-bar-purple progress-bar-striped active" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                <span class="sr-only">95% Complete</span>
+            </div>
+        </div>
+    </div> -->
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="white-box">
+                <div class="table-wrap">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>礼堂名称</th>
+                                <th>星级</th>
+                                <th>所属街道</th>
+                                <th>详细地址</th>
+                                <th>管理人员/干部</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="item in list" class="search-item">
+                                <td>
+                                    <h3><a href="#">{[item['name']]}</a></h3>
+                                </td>
+                                <td><i v-for="count in item['star']" class="fa fa-star"></i></td>
+                                <td>{[item['city_name']]}</td>
+                                <td>{[item['address']]}</td>
+                                <td class="friend-list">
+                                    <ul>
+                                        <li v-for="m in item['member']"> <a href="">{[m['name']]}</a> </li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-primary">编辑</button>
+                                    <button type="button" class="btn btn-danger">删除</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 翻页 -->
+    <ul class="pagination m-t-30">
+        <li><a href="#" @click="go_page(1)" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+        <li v-for="index in page['page_count']" :class="{active:index===page['page']}"><a href="#"
+                @click="go_page(index)">{[index]}</a></li>
+        <li><a href="#" @click="go_page(page.page_count)" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+    </ul>
+
 </div>
 
-<?php
-for($i=0; $i<count($ancestral); $i++){
-    $item = $ancestral[$i];
-?>
-
-<div class="search-item">
-    <h3><a href="#">{$item['name']}</a></h3>
-    <a class="search-link" href="javascript:void(0);">www.baidu.com</a>
-    <p><?php for($j=0;$j<$item['star'];$j++){echo('⭐');}?></p>
-    <p>{$item['address']}</p>
-</div>
-<?php } ?>
-<!-- /.search item-->
-
-
-<!-- 翻页 -->
-<ul class="pagination m-t-30">
-    <li><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
-    <li><a href="#">1</a></li>
-    <li class="active"><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
-    <li><a href="#">6</a></li>
-    <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
-</ul>
+<!-- Vue  -->
+<script>
+    let app = new Vue({
+        delimiters: ["{[", "]}"],
+        el: '#app',
+        data: {
+            list: [],
+            page: {
+                total: 0,
+                page: 0,
+                limit: 10,
+                page_count: 0
+            },
+        },
+        methods: {
+            go_page(index) {
+                Vue.http.get('/api/ancestral.php', { params: { page: index, limit: this.page.limit } }).
+                    then((res) => {
+                        if (res.statusText !== 'OK') {
+                            console.log('complete', res);
+                            return;
+                        }
+                        this.list = res.body.list;
+                        this.page = res.body.page;
+                    }, (err) => {
+                        console.log('error', err);
+                    });
+            },
+            init() {
+                this.go_page(1);
+            }
+        },
+        mounted() {
+            this.init();
+        }
+    });
+</script>

@@ -1,8 +1,9 @@
 <?php session_start();
-include('./class/PHPMysql.class.php');
-include('./class/PHPnew.class.php');
-include('./class/Config.class.php');
-include('./class/Utils.class.php');
+include_once('./class/PHPMysql.class.php');
+include_once('./class/PHPnew.class.php');
+include_once('./class/Config.class.php');
+include_once('./class/Utils.class.php');
+
 
 // 表单变量
 $account = isset($_POST['account']) ? $_POST['account'] : '';
@@ -15,6 +16,7 @@ $form = array(
 
 // 网站配置
 $Config = new Config();
+$Utils = new Utils();
 
 if ($account && $password) {
 	// 数据库
@@ -23,12 +25,27 @@ if ($account && $password) {
 	$member = $mysql
 		->field(array('*'))
 		->where($form)
+		->limit(1)
 		->select('member');
 		
 	if (count($member) > 0) {
+
+		$member = $member[0];
+
+		// 检查状态
+		if ($member['status'] === 0) {
+			$message = urldecode($member['account'] . ' 账号已禁用!');
+			$Utils::Location('/login.php?message=' . $message);
+		}
+		
+		// 检查类型
+		if ($member['type'] < 9) {
+			$message = urldecode($member['account'] . ' 权限不够!');
+			$Utils::Location('/login.php?message=' . $message);
+		}
+
 		$_SESSION['isLogin'] = $Config::$IsLogin;
-		$_SESSION['id'] = $member[0]['id'];
-		$Utils = new Utils();
+		$_SESSION['id'] = $member['id'];
 		$Utils::Location('/');
 	}
 }

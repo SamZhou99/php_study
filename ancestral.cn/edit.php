@@ -1,7 +1,8 @@
 <?php session_start();
-include('./class/PHPMysql.class.php');
-include('./class/PHPnew.class.php');
-include('./class/Config.class.php');
+include_once('./class/PHPMysql.class.php');
+include_once('./class/PHPnew.class.php');
+include_once('./class/Config.class.php');
+include_once('./class/Utils.class.php');
 
 $Config = new Config();
 $mysql = new PHPMysql($Config::$DB);
