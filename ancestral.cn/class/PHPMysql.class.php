@@ -191,6 +191,10 @@ class PHPMysql
         return $this->_doExec($sql);
     }
 
+    public function lastInsertId(){
+        return self::$_dbh->lastInsertId();
+    }
+
     /**
      * 删除方法
      * @param string $tbName 操作的数据表名

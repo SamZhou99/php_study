@@ -1,5 +1,86 @@
 <div id="app">
 
+
+    <!-- <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    开始演示模态框
+    </button> -->
+
+
+    <!--Start Page Title-->
+    <div class="page-title-box">
+        <h4 class="page-title">{$title}</h4>
+        <button @click="onClickAdd()" type="button" class="btn btn-primary pull-right">
+            <span class="ion-plus-round"></span>
+        </button>
+        <div class="clearfix"></div>
+    </div>
+    <!--End Page Title-->
+
+
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        {[form.title]}
+                    </h4>
+                </div>
+                <div class="modal-body">
+
+                    <div style="overflow: hidden;">
+                        <div class="form-group">
+                            <label>礼堂名称</label>
+                            <input v-model="form.data.name" class="form-control" placeholder="礼堂名称" type="text">
+                        </div>
+
+                        <div class="form-group">
+                            <label>评星级</label>
+                            <select v-model="form.data.star" class="form-control">
+                                <option v-for="i in 5">{[i]}</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>所属地区</label>
+                            <select v-model="form.data.city_id" class="form-control">
+                                <option v-for="v in request.city" :value="v['id']" :selected="true">{[v['name']]}
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <div><label>人员</label></div>
+                            <span v-for="v,i in request.member" style="margin-right: 10px;">
+                                <input v-model="form.data.member" :id="i" :value="v" type="checkbox">
+                                <label :for="i">{[v['name']]}</label>
+                            </span>
+                            <br>
+                            <!-- <span>Checked names: {[ form.member ]}</span> -->
+                        </div>
+
+                        <div class="form-group">
+                            <label>详细地址</label>
+                            <input v-model="form.data.address" class="form-control" placeholder="详细地址" type="text">
+                        </div>
+                        <!-- <button type="submit" class="btn btn-primary" style="visibility: hidden;">Submit</button> -->
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        关闭
+                    </button>
+                    <button @click='onClickEnter()' :disabled="loading" type="button" class="btn btn-primary">
+                        提交
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
     <!-- <div class="search-box-top">
         <form>
             <div class="input-group">
@@ -23,30 +104,27 @@
                     <table class="table">
                         <thead>
                             <tr>
+                                <th>编号</th>
                                 <th>礼堂名称</th>
                                 <th>星级</th>
-                                <th>所属街道</th>
+                                <th>所属地区</th>
                                 <th>详细地址</th>
-                                <th>管理人员/干部</th>
+                                <th>人员/干部</th>
                                 <th>操作</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr v-for="item in list" class="search-item">
-                                <td>
-                                    <h3><a href="#">{[item['name']]}</a></h3>
-                                </td>
+                                <td>{[item['id']]}</td>
+                                <td>{[item['name']]}</td>
                                 <td><i v-for="count in item['star']" class="fa fa-star"></i></td>
-                                <td>{[item['city_name']]}</td>
+                                <td>{[cityInfo(item['city_id'])]}</td>
                                 <td>{[item['address']]}</td>
-                                <td class="friend-list">
-                                    <ul>
-                                        <li v-for="m in item['member']"> <a href="">{[m['name']]}</a> </li>
-                                    </ul>
-                                </td>
+                                <td class="friend-list"><span v-for="m in item['member']"> {[m['name']]} </span></td>
                                 <td>
-                                    <button type="button" class="btn btn-primary">编辑</button>
-                                    <button type="button" class="btn btn-danger">删除</button>
+                                    <button @click="onClickEdit(item)" type="button" class="btn btn-primary">编辑</button>
+                                    <button @click="onClickDelete(item)" type="button"
+                                        class="btn btn-danger">删除</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -59,10 +137,11 @@
 
     <!-- 翻页 -->
     <ul class="pagination m-t-30">
-        <li><a href="#" @click="go_page(1)" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
-        <li v-for="index in page['page_count']" :class="{active:index===page['page']}"><a href="#"
-                @click="go_page(index)">{[index]}</a></li>
-        <li><a href="#" @click="go_page(page.page_count)" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+        <li><a href="#" @click="onClickGoPage(1)" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+        <li v-for="index in page['page_count']" :class="{active:index===page['page']}"><a href="javascript:;"
+                @click="onClickGoPage(index)">{[index]}</a></li>
+        <li><a href="#" @click="onClickGoPage(page.page_count)" aria-label="Next"><span aria-hidden="true">»</span></a>
+        </li>
     </ul>
 
 </div>
@@ -73,6 +152,7 @@
         delimiters: ["{[", "]}"],
         el: '#app',
         data: {
+            loading: false,
             list: [],
             page: {
                 total: 0,
@@ -80,23 +160,177 @@
                 limit: 10,
                 page_count: 0
             },
+            url: {
+                city: '/api/city.php',
+                member: '/api/member.php?limit=999999',
+                ancestral: '/api/ancestral.php',
+            },
+            form: {
+                title: '',
+                data: {
+                    act: '',
+                    id: 0,
+                    name: '',
+                    star: 0,
+                    city_id: 0,
+                    address: '',
+                    city: [],
+                    member: [],
+                }
+            },
+            request: {
+                city: null,
+                member: null,
+            }
         },
         methods: {
-            go_page(index) {
-                Vue.http.get('/api/ancestral.php', { params: { page: index, limit: this.page.limit } }).
-                    then((res) => {
-                        if (res.statusText !== 'OK') {
-                            console.log('complete', res);
-                            return;
-                        }
-                        this.list = res.body.list;
-                        this.page = res.body.page;
-                    }, (err) => {
-                        console.log('error', err);
-                    });
+            // 点击添加按钮
+            onClickAdd() {
+                this.form.title = '添加-礼堂数据';
+                this.form.data = {
+                    act: 'add',
+                    id: null,
+                    name: null,
+                    star: null,
+                    city_id: null,
+                    address: null,
+                    member: [],
+                };
+                $('#myModal').modal('show');
             },
+            // 点击编辑按钮
+            onClickEdit(item) {
+                this.form.title = '编辑-礼堂数据';
+                this.form.data = {
+                    act: 'edit',
+                    id: item.id,
+                    name: item.name,
+                    star: item.star,
+                    city_id: item.city_id,
+                    address: item.address,
+                    member: item.member,
+                }
+                $("#myModal").modal('show');
+            },
+            // 点击删除按钮
+            onClickDelete(item) {
+                let id = item['id'];
+                if (confirm('您 是/否 要删除【编号：' + id + '】的数据？\n请谨慎：删除后不能找回。')) {
+                    this.delete(id);
+                }
+            },
+            // 点击提交按钮
+            onClickEnter() {
+                if (this.form.data.act === 'add') {
+                    this.add();
+                } else if (this.form.data.act === 'edit') {
+                    this.update();
+                }
+            },
+            // 点击翻页按钮
+            onClickGoPage(index) {
+                if (index == this.page.page) {
+                    console.log('同页不要加载');
+                    return;
+                }
+                this.goPage(index);
+            },
+
+            // 删除
+            delete(id) {
+                this.post(this.url.ancestral, {
+                    act: 'del',
+                    id: id
+                })
+            },
+            // 更新
+            update() {
+                this.post(this.url.ancestral, this.form.data);
+            },
+            // 添加
+            add() {
+                this.post(this.url.ancestral, this.form.data);
+            },
+
+
+            post(url, params, callback) {
+                this.loading = true;
+                $.post(url, params, res => {
+                    this.loading = false;
+                    $("#myModal").modal('hide');
+                    this.goPage(this.page.page);
+                    // callback(res);
+                })
+            },
+            get(url, params, callback) {
+                this.loading = true;
+                $.ajax({
+                    'url': url,
+                    'type': 'GET',
+                    'dataType': 'json',
+                    'data': params,
+                    'success': res => {
+                        this.loading = false;
+                        callback(res);
+                    },
+                    'error': err => {
+                        this.loading = false;
+                        console.log(err);
+                        alert(err);
+                    }
+                })
+            },
+            cityInfo(city_id) {
+                let currId = city_id;
+                let nameArr = [];
+                let len = this.request.city.length;
+                for (let i = 0; i < len; i++) {
+                    let item = this.getCityItem(currId);
+                    if (item) {
+                        nameArr.push(item['name']);
+                        currId = item['parent'];
+                        if (currId === 0) {
+                            break;
+                        }
+                    }
+                }
+                return nameArr.reverse().toString().split(',').join('-');
+            },
+            getCityItem(city_id) {
+                let a = this.request.city;
+                for (let i = 0; i < a.length; i++) {
+                    if (city_id === a[i]['id']) {
+                        return a[i];
+                    }
+                }
+                return null;
+            },
+
+            // 获取会员数据
+            getMembers() {
+                this.get(this.url.member, null, (res) => {
+                    this.request.member = res.list;
+                });
+            },
+            // 获取城市数据
+            getCitys() {
+                this.get(this.url.city+'?limit=999999', null, (res) => {
+                    this.request.city = res.list;
+                    this.goPage(1);
+                });
+            },
+            // 页面跳转
+            goPage(index) {
+                let data = { page: index, limit: this.page.limit };
+                this.get(this.url.ancestral, data, res => {
+                    this.list = res.list;
+                    this.page = res.page;
+                })
+            },
+            // 初始化
             init() {
-                this.go_page(1);
+                this.getCitys();
+                this.getMembers();
             }
         },
         mounted() {

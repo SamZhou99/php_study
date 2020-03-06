@@ -27,7 +27,7 @@ if ($account && $password) {
 		->where($form)
 		->limit(1)
 		->select('member');
-		
+
 	if (count($member) > 0) {
 
 		$member = $member[0];
@@ -37,7 +37,7 @@ if ($account && $password) {
 			$message = urldecode($member['account'] . ' 账号已禁用!');
 			$Utils::Location('/login.php?message=' . $message);
 		}
-		
+
 		// 检查类型
 		if ($member['type'] < 9) {
 			$message = urldecode($member['account'] . ' 权限不够!');
@@ -47,6 +47,9 @@ if ($account && $password) {
 		$_SESSION['isLogin'] = $Config::$IsLogin;
 		$_SESSION['id'] = $member['id'];
 		$Utils::Location('/');
+	} else {
+		$message = urldecode('账号或密码不正确!');
+		$Utils::Location('/login.php?message=' . $message);
 	}
 }
 
