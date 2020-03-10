@@ -1,0 +1,181 @@
+<div id="app">
+
+
+    <!--Start Page Title-->
+    <div class="page-title-box">
+        <h4 class="page-title">{$title}</h4>
+        <div class="clearfix"></div>
+    </div>
+    <!--End Page Title-->
+
+
+    <div class="search-box-top">
+        <div class="input-group m-b-15">
+            <div class="input-group-btn" style="width: 100px;">
+                <select v-model="form.data.act" class="form-control">
+                    <option value="1">礼堂名称</option>
+                    <option value="2">地区名称</option>
+                    <option value="3">人员名称</option>
+                    <option value="4">人员电话</option>
+                    <option value="5">创建时间</option>
+                    <option value="6">礼堂星级</option>
+                    <option value="7">文章标题</option>
+                    <option value="8">文章内容</option>
+                </select>
+            </div>
+            <input v-model="form.data.key" name="search" class="form-control input-search" placeholder="请输入要搜索的『关键字』"
+                type="text">
+            <span class="input-group-btn">
+                <button @click="onClickSearch()" class="btn btn-primary" type="button"><i
+                        class="fa fa-search"></i></button>
+            </span>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="white-box">
+
+
+                <div v-for="item in list" class="search-item">
+                    <h3>
+                        <h4><a :href="'/article.php?ancestral_id='+(item['id'])">{[item['name']]}</a></h4>
+                    </h3>
+                    <p>星级：<i v-for="count in item['star']" class="fa fa-star text-danger"></i></p>
+                    <p>详细地址：{[item['city_name']]} - {[item['address']]}</p>
+                    <p><p v-for="m in item['member']"><i class="icon-user"></i> {[m['name']]}({[m['position']]})　<i class="icon-phone"></i> {[m['phone']]}</p></p>
+                    <p>
+                        <p v-for="a in item['article']">
+                            <!-- <a :href="'/article.php?ancestral_id='+(item['id'])">{[showText(a['title'],10)]}</a> -->
+                            <a :href="'/article_details.php?id='+(a['id'])+'&ancestral_id='+(item['id'])" target="_blank">{[showText(a['title'],10)]}</a>
+                            {[showText(a['content'])]}
+                        </p>
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 翻页 -->
+    <ul class="pagination m-t-30">
+        <li><a href="#" @click="onClickGoPage(1)" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+        <li v-for="index in page['page_count']" :class="{active:index===page['page']}"><a href="javascript:;"
+                @click="onClickGoPage(index)">{[index]}</a></li>
+        <li><a href="#" @click="onClickGoPage(page.page_count)" aria-label="Next"><span aria-hidden="true">»</span></a>
+        </li>
+    </ul>
+
+</div>
+
+<!-- Vue  -->
+<script>
+    let app = new Vue({
+        delimiters: ["{[", "]}"],
+        el: '#app',
+        data: {
+            loading: false,
+            list: [],
+            page: {
+                total: 0,
+                page: 0,
+                limit: 10,
+                page_count: 0
+            },
+            url: {
+                list: '/api/list.php',
+            },
+            form: {
+                title: '',
+                data: {
+                    act: 1,
+                    key: '',
+                }
+            },
+            request: {
+                list: []
+            }
+        },
+        methods: {
+            // 点击搜索按钮
+            onClickSearch() {
+                this.goPage(1);
+            },
+
+            // 点击翻页按钮
+            onClickGoPage(index) {
+                if (index == this.page.page) {
+                    console.log('同页不要加载');
+                    return;
+                }
+                this.goPage(index);
+            },
+
+            // post
+            post(url, params, callback) {
+                this.loading = true;
+                $.post(url, params, res => {
+                    this.loading = false;
+                    $("#myModal").modal('hide');
+                    this.goPage(this.page.page);
+                    // callback(res);
+                })
+            },
+            // get
+            get(url, params, callback) {
+                this.loading = true;
+                $.ajax({
+                    'url': url,
+                    'type': 'GET',
+                    'dataType': 'json',
+                    'data': params,
+                    'success': res => {
+                        this.loading = false;
+                        callback(res);
+                    },
+                    'error': err => {
+                        this.loading = false;
+                        console.log(err);
+                        alert(err.statusText);
+                    }
+                })
+            },
+            filterHtml(html) {
+                let len = html.length;
+                let resultStr;
+                for (let i = 0; i < len; i++) {
+                    resultStr = html.replace(/<[^>]+>/g, "");//截取html标签
+                    resultStr = resultStr.replace(/ /ig, "");//截取空格等特殊标签
+                }
+                return resultStr;
+            },
+            showText(html, max = 20) {
+                let text = this.filterHtml(html);
+                return text.length > max ? text.substring(0, max) + '...' : text;
+            },
+
+            // 页面跳转
+            goPage(index) {
+                // let data = { page: index, limit: this.page.limit };
+                let data = JSON.parse(JSON.stringify(this.form.data));
+                data.page = index;
+                data.limit = this.page.limit;
+                this.get(this.url.list, data, res => {
+                    this.list = res.list;
+                    this.page = res.page;
+                })
+            },
+
+            // 初始化
+            init() {
+                this.goPage(1);
+            }
+        },
+        mounted() {
+            this.init();
+        }
+    });
+</script>

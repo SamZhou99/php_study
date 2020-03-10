@@ -45,7 +45,7 @@
                         <div class="form-group">
                             <label>所属地区</label>
                             <select v-model="form.data.city_id" class="form-control">
-                                <option v-for="v in request.city" :value="v['id']" :selected="true">{[v['name']]}
+                                <option v-for="v in request.city" :value="v['id']">{[v['name']]}
                                 </option>
                             </select>
                         </div>
@@ -122,6 +122,8 @@
                                 <td>{[item['address']]}</td>
                                 <td class="friend-list"><span v-for="m in item['member']"> {[m['name']]} </span></td>
                                 <td>
+                                    <button @click="onClickArticle(item)" type="button"
+                                        class="btn btn-inverse">添加文章</button>
                                     <button @click="onClickEdit(item)" type="button" class="btn btn-primary">编辑</button>
                                     <button @click="onClickDelete(item)" type="button"
                                         class="btn btn-danger">删除</button>
@@ -235,6 +237,9 @@
                 }
                 this.goPage(index);
             },
+            onClickArticle(item) {
+                window.document.location.href = 'article.php?ancestral_id=' + item.id;
+            },
 
             // 删除
             delete(id) {
@@ -314,7 +319,7 @@
             },
             // 获取城市数据
             getCitys() {
-                this.get(this.url.city+'?limit=999999', null, (res) => {
+                this.get(this.url.city + '?limit=999999', null, (res) => {
                     this.request.city = res.list;
                     this.goPage(1);
                 });

@@ -1,6 +1,7 @@
 <?php
 $PHP_SELF = $SERVER['PHP_SELF'];
 
+$listUrl = '/list.php';
 $ancestralUrl = '/ancestral.php';
 $articleUrl = '/article.php';
 $articleCategoryUrl = '/article_category.php';
@@ -8,6 +9,7 @@ $cityUrl = '/city.php';
 $memberUrl = '/member.php';
 $logoutUrl = '/logout.php';
 
+$listAct = ($PHP_SELF===$listUrl) ? 'class="active"' : '';
 $ancestralAct = ($PHP_SELF===$ancestralUrl) ? 'class="active"' : '';
 $articleAct = ($PHP_SELF===$articleUrl) ? 'class="active"' : '';
 $articleCategoryAct = ($PHP_SELF===$articleCategoryUrl) ? 'class="active"' : '';
@@ -33,11 +35,13 @@ $navAct = ($PHP_SELF===$memberUrl OR $PHP_SELF===$cityUrl) ? 'nav-active' : '';
         <!--Sidebar nav-->
         <ul class="nav nav-pills nav-stacked custom-nav">
 
-            <li <?php echo($ancestralAct);?> ><a href="<?php echo($ancestralUrl);?>"><i class="fa fa-bank"></i> <span> 礼堂管理 </span></a></li>
+            <li <?php echo($listAct);?> ><a href="<?php echo($listUrl);?>"><i class="fa fa-list-alt"></i> <span> 展示列表 </span> </a></li>
 
-            <li <?php echo($articleAct);?> ><a href="<?php echo($articleUrl);?>"><i class="fa fa-file-text-o"></i> <span> 文章管理 </span></a></li>
+            <li <?php echo($ancestralAct);?> ><a href="<?php echo($ancestralUrl);?>"><i class="fa fa-bank"></i> <span> 礼堂管理 </span> </a> </li>
 
-            <li <?php echo($articleCategoryAct);?> ><a href="<?php echo($articleCategoryUrl);?>"><i class="fa fa-list"></i> <span> 文章类别 </span></a></li>
+            <!-- <li <?php echo($articleAct);?> ><a href="<?php echo($articleUrl);?>"><i class="fa fa-file-text-o"></i> <span> 文章管理 </span> </a> </li> -->
+
+            <li <?php echo($articleCategoryAct);?> ><a href="<?php echo($articleCategoryUrl);?>"><i class="fa fa-list"></i> <span> 文章类别 </span> </a> </li>
 
             <li class="menu-list <?php echo($navAct);?>"><a href="#"><i class="icon-wrench"></i> <span> 系统设置 </span></a>
                 <ul class="sub-menu-list">

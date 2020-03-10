@@ -11,4 +11,4 @@ $Utils = new Utils();
 
 $Utils::CheckLogin('/login.php');
 
-$Utils::Location('/ancestral.php');
+$Utils::Location('/list.php');

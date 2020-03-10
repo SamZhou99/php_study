@@ -20,6 +20,7 @@ $page = isset($_GET['page']) ? (int) $_GET['page'] : 1;
 $pageNum = ((int) $page - 1) * $limit;
 $field = '*';
 $timestamp = date("Y-m-d H:i:s");
+$ancestral_id = isset($_REQUEST['ancestral_id']) ? (int) $_REQUEST['ancestral_id'] : 0;
 
 
 if ($act === 'add') {
@@ -27,6 +28,7 @@ if ($act === 'add') {
         'title' => $_POST['title'],
         'content' => $_POST['content'],
         'category_id' => $_POST['category_id'],
+        'ancestral_id' => $ancestral_id,
         'created' => $timestamp,
         'updated' => $timestamp,
     );
@@ -42,6 +44,7 @@ if ($act === 'add') {
         'title' => $_POST['title'],
         'content' => $_POST['content'],
         'category_id' => $_POST['category_id'],
+        'ancestral_id' => $ancestral_id,
         'updated' => $timestamp,
     );
     $result = $Mysql->where(array('id' => $id))->update('article', $form);
@@ -60,11 +63,13 @@ if ($act === 'add') {
 }
 
 
-$total = $Mysql->field('COUNT(0) AS total')->select('article')[0]['total'];
-$list = $Mysql->field($field)->order(array('id' => 'desc'))->limit($page, $limit)->select('article');
-// for ($i = 0; $i < count($list); $i++) {
-//     $list[$i]['parent_name'] = $Mysql->where(array('id' => $list[$i]['parent']))->select('city')[0]['name'];
-// }
+if ($ancestral_id) {
+    $total = $Mysql->field('COUNT(0) AS total')->where(array('ancestral_id' => $ancestral_id))->select('article')[0]['total'];
+    $list = $Mysql->doSql("SELECT article.*,ancestral.name AS ancestral_name FROM article JOIN ancestral ON ancestral.id=article.ancestral_id WHERE ancestral.id=$ancestral_id");
+} else {
+    $total = $Mysql->field('COUNT(0) AS total')->select('article')[0]['total'];
+    $list = $Mysql->doSql("SELECT article.*,ancestral.name AS ancestral_name FROM article JOIN ancestral ON ancestral.id=article.ancestral_id");
+}
 
 
 $data = array(
