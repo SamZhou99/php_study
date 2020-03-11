@@ -22,7 +22,7 @@ class Test extends CI_Controller
 		$data = [
 			'flag' => '1',
 			'data' => 'Hello JSON',
-			'randomStr' => $this->randomStr(32),
+			'randomStr' => 'php-'.$this->randomStr(6),
 			'中文' => $this->randomCN(50),
 		];
 		echo json_encode($data);
