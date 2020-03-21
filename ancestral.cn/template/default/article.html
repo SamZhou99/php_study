@@ -97,6 +97,7 @@
                                 <td>{[item['title']]}</td>
                                 <td>{[showText(item['content'])]}</td>
                                 <td>
+                                    <button @click="onClickView(item)" type="button" class="btn btn-purple">预览</button>
                                     <button @click="onClickEdit(item)" type="button" class="btn btn-primary">编辑</button>
                                     <button @click="onClickDelete(item)" type="button"
                                         class="btn btn-danger">删除</button>
@@ -229,11 +230,13 @@
                     this.delete(id);
                 }
             },
+            // 点击预览
+            onClickView(item) {
+                window.open(`http://ancestral.cn/article_details.php?id=${item['id']}`, '_blank');
+            },
             // 点击提交按钮
             onClickEnter() {
                 this.form.data.content = $('.note-editable').html();
-                // console.log(this.form.data);
-                // return;
                 if (this.form.data.act === 'add') {
                     this.add();
                 } else if (this.form.data.act === 'edit') {
@@ -327,6 +330,17 @@
                 return '';
             },
 
+            // 编辑文章
+            editArticle() {
+                let id = this.getQueryVariable('id');
+                if (id) {
+                    this.get(this.url.article, { id: id }, res => {
+                        let item = res.data;
+                        this.onClickEdit(item);
+                    });
+                }
+            },
+
             // 获取文章类别
             getCategory() {
                 this.get(this.url.category, { limit: 999999 }, res => {
@@ -346,6 +360,8 @@
                 this.form.data.ancestral_id = this.getQueryVariable('ancestral_id');
                 this.getCategory();
                 this.goPage(1);
+                //从url上获取id编辑文章内容
+                this.editArticle();
             }
         },
         mounted() {

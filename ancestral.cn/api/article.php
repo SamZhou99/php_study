@@ -21,6 +21,7 @@ $pageNum = ((int) $page - 1) * $limit;
 $field = '*';
 $timestamp = date("Y-m-d H:i:s");
 $ancestral_id = isset($_REQUEST['ancestral_id']) ? (int) $_REQUEST['ancestral_id'] : 0;
+$id = isset($_REQUEST['id']) ? (int) $_REQUEST['id'] : 0;
 
 
 if ($act === 'add') {
@@ -63,6 +64,15 @@ if ($act === 'add') {
         'act' => 'delete',
         'result' => $result,
     )));
+}
+
+
+if ($id) {
+    $item = $Mysql->doSql("SELECT article.*,ancestral.name AS ancestral_name FROM article JOIN ancestral ON ancestral.id=article.ancestral_id WHERE article.id=$id");
+    if (count($item) > 0) {
+        exit(json_encode(array('data' => $item[0])));
+    }
+    exit(json_encode(array('id' => $id)));
 }
 
 

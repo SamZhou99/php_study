@@ -47,9 +47,7 @@
                     <p><p v-for="m in item['member']"><i class="icon-user"></i> {[m['name']]}({[m['position']]})　<i class="icon-phone"></i> {[m['phone']]}</p></p>
                     <p>
                         <p v-for="a in item['article']">
-                            <!-- <a :href="'/article.php?ancestral_id='+(item['id'])">{[showText(a['title'],10)]}</a> -->
-                            <a :href="'/article_details.php?id='+(a['id'])+'&ancestral_id='+(item['id'])" target="_blank"><i class="fa fa-eye"></i>　{[showText(a['title'],10)]}</a>
-                            {[showText(a['content'])]}
+                            {[showText(a['title'],24)]} <a :href="'/article_details.php?id='+(a['id'])+'&ancestral_id='+(item['id'])" target="_blank"><i class="fa fa-eye"></i></a>　<a :href="'/article.php?id='+(a['id'])"><i class="fa fa-edit"></i></a>
                         </p>
                     </p>
                 </div>

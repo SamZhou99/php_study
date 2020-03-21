@@ -11,6 +11,7 @@ $allowedExts = array("gif", "jpeg", "jpg", "png");
 $fileType = array('image/gif', 'image/jpeg', 'image/jpg', 'image/pjpeg', 'image/x-png', 'image/png');
 $fileSize = 1024 * 1024;
 $extension = end(explode(".", $_FILES["file"]["name"]));
+$newFileName = date('YmdHms') . '-' . rand(100000, 999999) . '.' . $extension;
 
 if (!in_array($extension, $allowedExts)) {
     $data['error'] = '非法文件 code:1';
@@ -33,11 +34,13 @@ if ($_FILES["file"]["error"] > 0) {
 }
 
 
-move_uploaded_file($_FILES['file']['tmp_name'], '../upload/' . $_FILES['file']['name']);
+// move_uploaded_file($_FILES['file']['tmp_name'], '../upload/' . $_FILES['file']['name']);
+move_uploaded_file($_FILES['file']['tmp_name'], '../upload/' . $newFileName);
 
 
-$data['url'] = '/upload/' . $_FILES['file']['name'];
+$data['url'] = '/upload/' . $newFileName;
 $data['fileName'] = $_FILES["file"]["name"];
 $data['fileType'] = $_FILES["file"]["type"];
 $data['fileSize'] = ($_FILES["file"]["size"] / 1024) . 'kB';
+$data['newFileName'] = $newFileName;
 echo (json_encode($data));
