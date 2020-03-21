@@ -47,6 +47,9 @@ if ($act === 'add') {
         'ancestral_id' => $ancestral_id,
         'updated' => $timestamp,
     );
+    // var_dump($form);
+    // exit();
+    // $form['content'] = str_ireplace("'", "'''", $form['content']);
     $result = $Mysql->where(array('id' => $id))->update('article', $form);
     exit(json_encode(array(
         'act' => 'edit',

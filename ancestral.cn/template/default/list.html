@@ -48,7 +48,7 @@
                     <p>
                         <p v-for="a in item['article']">
                             <!-- <a :href="'/article.php?ancestral_id='+(item['id'])">{[showText(a['title'],10)]}</a> -->
-                            <a :href="'/article_details.php?id='+(a['id'])+'&ancestral_id='+(item['id'])" target="_blank">{[showText(a['title'],10)]}</a>
+                            <a :href="'/article_details.php?id='+(a['id'])+'&ancestral_id='+(item['id'])" target="_blank"><i class="fa fa-eye"></i>　{[showText(a['title'],10)]}</a>
                             {[showText(a['content'])]}
                         </p>
                     </p>
