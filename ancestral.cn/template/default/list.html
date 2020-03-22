@@ -9,6 +9,36 @@
     <!--End Page Title-->
 
 
+    <div>
+        <h5>星级礼堂个数</h5>
+    </div>
+
+    <div class="row">
+
+        <!--Start info box-->
+        <div v-for="item, key in request.star" class="col-md-2 col-sm-6">
+            <div class="info-box-main">
+                <div class="info-stats">
+                    <p>{[item.total]}</p>
+                    <span>Total Number</span>
+                </div>
+                <div class="text-danger">
+                    <span v-for="s in Number(key)"><i class="fa fa-star"></i></span>
+                </div>
+                <div class="info-box-progress">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="48"
+                            aria-valuemin="0" aria-valuemax="100" :style="'width: '+item.per+'%;'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End info box-->
+
+    </div>
+
+
     <div class="search-box-top">
         <div class="input-group m-b-15">
             <div class="input-group-btn" style="width: 100px;">
@@ -44,10 +74,15 @@
                     </h3>
                     <p>星级：<i v-for="count in item['star']" class="fa fa-star text-danger"></i></p>
                     <p>详细地址：{[item['city_name']]} - {[item['address']]}</p>
-                    <p><p v-for="m in item['member']"><i class="icon-user"></i> {[m['name']]}({[m['position']]})　<i class="icon-phone"></i> {[m['phone']]}</p></p>
+                    <p>
+                        <p v-for="m in item['member']"><i class="icon-user"></i> {[m['name']]}({[m['position']]})　<i
+                                class="icon-phone"></i> {[m['phone']]}</p>
+                    </p>
                     <p>
                         <p v-for="a in item['article']">
-                            {[showText(a['title'],24)]} <a :href="'/article_details.php?id='+(a['id'])+'&ancestral_id='+(item['id'])" target="_blank"><i class="fa fa-eye"></i></a>　<a :href="'/article.php?id='+(a['id'])"><i class="fa fa-edit"></i></a>
+                            <a :href="'/article_details.php?id='+(a['id'])+'&ancestral_id='+(item['id'])"
+                                target="_blank">{[showText(a['title'],24)]}</a>　<a
+                                :href="'/article.php?id='+(a['id'])"><i class="fa fa-edit"></i></a>
                         </p>
                     </p>
                 </div>
@@ -85,6 +120,7 @@
             },
             url: {
                 list: '/api/list.php',
+                info: '/api/info.php',
             },
             form: {
                 title: '',
@@ -94,7 +130,8 @@
                 }
             },
             request: {
-                list: []
+                list: [],
+                star: [],
             }
         },
         methods: {
@@ -167,9 +204,27 @@
                 })
             },
 
+            // 获取info
+            getInfo() {
+                this.get(this.url.info, {}, res => {
+                    console.log(res);
+                    let o = res.star;
+                    let max = 0;
+                    for (let k in o) {
+                        max = Math.max(max, o[k].total);
+                    }
+                    for (let k in o) {
+                        o[k]['per'] = o[k].total / max * 100;
+                    }
+                    console.log(max, o);
+                    this.request.star = o;
+                });
+            },
+
             // 初始化
             init() {
                 this.goPage(1);
+                this.getInfo();
             }
         },
         mounted() {

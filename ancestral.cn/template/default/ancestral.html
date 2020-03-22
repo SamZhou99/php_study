@@ -254,6 +254,22 @@
             },
             // 添加
             add() {
+                if(!this.form.data.name){
+                    alert('请输入 礼堂名称');
+                    return;
+                }
+                if(!this.form.data.star){
+                    alert('请输入 评星级');
+                    return;
+                }
+                if(!this.form.data.city_id){
+                    alert('请输入 所属地区');
+                    return;
+                }
+                if(!this.form.data.address){
+                    alert('请输入 详细地址');
+                    return;
+                }
                 this.post(this.url.ancestral, this.form.data);
             },
 
