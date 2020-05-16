@@ -57,9 +57,11 @@ if($isAdmin === 9999){
 
 
 <div class="container allBodyBorder bdColor">
-<?php foreach ($category as $categoryItem) : ?>
+<?php foreach ($category as $categoryItem) : 
+$categoryCount = count($categoryItem['data']);
+?>
 <div class="row categoryText bgColor">
-<div class="col-12"><a id="{$categoryItem['name']}">{$categoryItem['name']}</a></div>
+<div class="col-12"><a id="{$categoryItem['name']}">{$categoryItem['name']} ({$categoryCount})</a></div>
 </div>
 <div class="row">
 <?php 
