@@ -1,7 +1,8 @@
 other
 cache
 cache_tpl
-node_modules/
+node_modules
+system
 
 *.psd
 *.exe
