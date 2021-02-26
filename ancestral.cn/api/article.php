@@ -23,6 +23,16 @@ $timestamp = date("Y-m-d H:i:s");
 $ancestral_id = isset($_REQUEST['ancestral_id']) ? (int) $_REQUEST['ancestral_id'] : 0;
 $id = isset($_REQUEST['id']) ? (int) $_REQUEST['id'] : 0;
 
+// 检查对象的值 是否为真
+function isCheckObjectValue($array)
+{
+    foreach ($array as $value) {
+        if (!$value) {
+            return false;
+        }
+    }
+    return true;
+}
 
 if ($act === 'add') {
     $form = array(
@@ -33,6 +43,15 @@ if ($act === 'add') {
         'created' => $timestamp,
         'updated' => $timestamp,
     );
+
+    if (!isCheckObjectValue($form)) {
+        exit(json_encode(array(
+            'act' => 'add',
+            'form' => $form,
+            'result' => $result,
+        )));
+    }
+
     $result = $Mysql->insert('article', $form);
     exit(json_encode(array(
         'act' => 'add',

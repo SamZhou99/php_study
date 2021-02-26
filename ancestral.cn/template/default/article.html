@@ -237,6 +237,12 @@
             // 点击提交按钮
             onClickEnter() {
                 this.form.data.content = $('.note-editable').html();
+                console.log(this.form.data)
+                if (!this.isCheckForm(this.form.data)) {
+                    alert('请检查提交完整数据，再提交！')
+                    return;
+                }
+
                 if (this.form.data.act === 'add') {
                     this.add();
                 } else if (this.form.data.act === 'edit') {
@@ -267,7 +273,15 @@
             add() {
                 this.post(this.url.article, this.form.data);
             },
-
+            // 检查表单值
+            isCheckForm(data) {
+                for (let i in data) {
+                    if (i != 'id' && !data[i]) {
+                        return false
+                    }
+                }
+                return true
+            },
 
             post(url, params, callback) {
                 this.loading = true;

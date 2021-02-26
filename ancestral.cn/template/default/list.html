@@ -179,6 +179,8 @@
                 })
             },
             filterHtml(html) {
+                if(!html)
+                    return '';
                 let len = html.length;
                 let resultStr;
                 for (let i = 0; i < len; i++) {
