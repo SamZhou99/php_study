@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link {
+            text-decoration: none;
+        }
+    
+        a:visited {
+            color: #999999;
+            text-decoration: line-through;
+        }
+    
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <style>
+        .div-test1{
+            display: block;
+        }
+        .div-test1 ul li{
+            list-style: none;
+        }
+    </style>
+    <div class="div-test1">
+        <ul>
+            <li>
+                <a href="#1">链接名称</a>
+            </li>
+            <li>
+                <a href="#2">链接名称</a>
+            </li>
+            <li>
+                <a href="#3">链接名称</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <style>
+        .div-msg {
+            width: 100px;
+            border: 1px solid red;
+            position: relative;
+        }
+        .div-msg:hover:after {
+            content: attr(data-msg);
+            position: absolute;
+            font-size: 12px;
+            width: 200%;
+            line-height: 30px;
+            text-align: center;
+            left: 0;
+            top: 25px;
+            border: 1px solid green;
+            background-color: #ffffff;
+        } 
+    </style>
+    <div class="div-msg" data-msg="Open this file in Github Desktop">
+        <a href="#6">hover</a>
+    </div>
+
+
+
+    <style>
+        .div-one-two{
+            margin: 10px;
+        }
+        .div-one-two a{
+            margin: 10px;
+            padding: 5px;
+        }
+        a.one:link {
+            color: #ff0000;
+        }
+    
+        a.one:visited {
+            color: #0000ff;
+        }
+    
+        a.one:hover {
+            color: #ffcc00;
+        }
+    
+        a.two:link {
+            transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            color: #000000;
+        }
+    
+        a.two:visited {
+            color: #666666;
+        }
+    
+        a.two:hover {
+            color: #db1c8c;
+            background-color: #ffffff;
+            border-radius: 6px;
+            box-shadow: 0px 0px 10px #AAAAAA;
+        }
+    </style>
+    <div class="div-one-two">
+        <a class="one" href="#7">时光飞逝</a>
+        <a class="two" href="#8">岁月如梭</a>
+    </div>
+
+</body>
+
+</html>

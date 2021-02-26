@@ -1,0 +1,206 @@
+视图
+    1.视图中，直接使用原生php代码
+    2.推荐使用
+        <?php foreach($list as $item):?>
+        <?=$item['name']?>
+        <?php endforeach;?>
+
+超级对象
+    1.当前的控制器对象
+        提供了很多属性：
+        $this->load
+            view()      装载视图
+            vars()      分配变量到视图
+            database()  装载数据库操作对象
+            model()     装载模型对象
+            helper()    助手对象
+        
+        $this->uri
+            是CI_URI类的实例
+            方法：
+            segment()   分段"/"取出URL上的参数
+            入口文件.php/控制器/动作/参数1/参数2
+
+        $this->input
+            是CI_INPUT类的实例
+            方法：
+            post('name')                代表$_POST['name']
+            server('DOCUMENT_ROOT')     代表$_SERVER['DOCUMENT_ROOT']
+
+    在视图里也可以使用$this使用超级对象
+
+
+
+数据库
+    修改配置文件    application/config/database.php
+    另外配置文件    default，是可以配置多数据库的
+    使用时         $this->load->database('default或其他');
+    $params = ['name', 'password'];   // 多个参数用Array，单个不用
+    $sql = "SELECT * FROM user WHERE name=? AND password=?";
+    $res = $this->db->query($sql, $params);
+    $res->result(); // 返回数组，数组里面是对象
+    $res->resultArray(); //返回数组，数组数据
+    $res->row(); // 返回第一条数据对象
+
+    $this->db->insert_id();     // 自增id
+    $this->db->affected_rows(); // 受影响行数
+
+    db的自动加载
+        application/config/autoload.php
+        $autoload['libraries'] = array('database');
+        不需要：$this->load->datebase();
+
+Active Record
+    1. application/config/database.php  配置中的设置需要打开
+        $active_record = TRUE;
+    2. application/config/autoload.php  配置中的设置需要打开
+        $autoload['libraries'] = array('datebase');
+    3. 配置文件中，配置表前缀后，会自动添加
+    
+    // get
+    $res = $this->db->get('table_name');
+    foreach($res->result() as $item){
+        echo $item->name;
+    }
+
+    // insert
+    $data = array('name'=>'jack', 'password'=>md5('jack'));
+    $bool = $this->db->insert('table_name', $data);
+
+    // update
+    $date = array('name'=>'peter', 'password'=>md5('peter'));
+    $bool = $this->db->update('table_name', $data, array('id'=>123));
+
+    // delete
+    $bool = $this->db->delete('table_name', array('id'=>123));
+
+    // 连贯操作
+    $this->db
+        ->select('id, name')
+        ->from('table_name')
+        ->where('id >=', 123)
+        ->where(array('id >=', 123, 'name','pter'))     // 连续的条件
+        ->limit(2,3)            // 跟sql里面相反
+        ->order_by('id desc')
+        ->get();
+
+    // 打印sql调试
+    $this->db->last_query();
+
+扩展CI类
+    config/config.php 里面可以修改 扩展类前缀 'MY_'
+    1. 如果要扩展 system/core/Controller.php 的类
+    2. 在这里新建 application/core/MY_Controller.php
+        class MY_Controller entends CI_Controller{
+            public function __construct() {
+                parent::__construct();
+                // 登录验证
+                // 权限验证
+            }
+
+            public function index(){
+                // 使用下面model, user是别名
+                $this->load->model('User_model', 'user');
+                $list = $this->user->list();
+                $this->load->view('user/index' array('list'=>$list));
+            }
+        }
+
+
+Model
+    1. 在 application/models 目录下 新建文件 user_model.php
+    class User_model entends CI_Model{
+        public function list(){
+            $res = $this->db->get('user');
+            return $res->result();
+        }
+    }
+
+
+Url相关函数
+    1. 页面需要提前加载 url辅助函数 $this->load->helper('url'); // 可以根据需要 配置 自动加载
+    2. 或者在 config/autoload.php 中配置 $autoload['helper'] = array('url', 'file');
+    site_url('控制器/方法'); // 网站路径
+    base_url(); // 网站根路径
+    current_url(); // 当前路径
+
+
+Route路由
+    1. 默认路由
+        $route['default_controller'] = 'welcome'; // 修改默认路由首页
+    2. config/routes.php
+        访问 localhost/show/202003/123.html // 123是id
+        $route['show/[\d]{6}/([\d]+)\.html'] = 'show/$1';
+
+
+配置nginx
+    1.
+    2.
+
+
+分页
+    1. 装载类
+        $config['base_url'] = site_url('/news/page/');
+        $config['total_rows'] = 200;
+        $config['per_page'] = 10;
+        $config['first_link'] = '首页';
+        $config['prev_link'] = '上一页';
+        $config['next_link'] = '下一页';
+        $config['last_link'] = '最后页';
+        $config['uri_segment'] = 3;
+        $offset = intval($this->uri->segment(3));
+        $sql = "SELECT * FROM user LIMIT $offset ,10";
+        $this->load->libraries('pagination');
+        $this->pagination->initialize($config);
+        $this->pagination->create_links();
+
+
+上传文件
+    1. 手动建好 uploads 目录
+    2. 装载类
+        $this->load->helper('url');                 // 前端指定提交路径
+        $this->load-view('user/file');              // 前端文件上传表单
+        $config['upload_path'] = './uploads/';      // 上传到新建好的目录
+        $config['allowed_types'] = 'gif|png|jpg|jpeg|webp';     // 允许上传这些文件类型
+        $config['max_size'] = '100';
+        $config['max_width'] = '1024';
+        $config['max_height'] = '768';
+        $config['file_name'] = uniqid();
+        $this->load->libaray('upload', $config);                // 装载文件上传类
+        $this->upload->do_upload('fromName');                   // 上传文件，表单名称
+        $this->upload->data();
+
+
+Session
+    1. 装载类
+        $this->load->libaray('session');
+        $user = array('id'=>3, 'name'=>'jack');
+        $this->session->set_userdata('user', $user);
+        获取session
+        $this->session->userdata('user');
+        在配置文件里$config['encryption_key'] = '32bit';
+
+
+验证码
+    1. 装载类
+        $this->load->helper('url');
+        $this->load->helper('captcha');
+        $vals = array(
+            'img_path'=>'./captcha/', // 此目录要手工创建
+            'img_url'=>base_url().'/captcha',
+            'img_width'=>150,
+            'img_height'=>30,
+            'expiration'=>7200, // 过期时间，时间一到自动删除文件
+        );
+        $cap = create_captcha($vals);
+        $this->load->view('user/test2', array('cap'=>$cap));
+
+        $cap['word']; // 验证文字
+
+
+表单验证
+    1. 装载类
+        $this->load->libaray('form_validation');
+        $this->form_validation->set_rules('name', '用户名', 'required'); // 还有很多，请查看手册
+        $bool = $this->form_validation->run();
+        var_dump($bool); // 验证是否成功
