@@ -34,7 +34,7 @@ $routes->group('api', ['namespace' => 'App\Controllers'], function ($routes) {
         $routes->delete('users/(:num)', 'Api\UserController::delete/$1');
 
         // 示例 API
-        $routes->get('test', 'Api\TestController::index');
-        $routes->post('test', 'Api\TestController::create');
+        $routes->get('test', 'TestController::index');
+        $routes->post('test', 'TestController::create');
     });
 });
